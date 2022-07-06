@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="EstiloPaginaWeb.css" type="text/css" />
+    <title>Taller PseIntCuatro</title>
+</head>
+<body>
+    <header><h1> Taller arreglos PseInt</h1>
+		<div id="Vuelta al portafolio" >
+			<p><a href="/TallerFinal/CarpetaPaginaWebRecopilaciones/PortafolioWeb.html">Portafolio Web</a></p>
+		  </div>
+	</header>
+    <iframe width="420" height="345" src="https://www.youtube.com/embed/72qrebfj3h0">
+    </iframe>
+    <h3>1.     Crear un vector de tipo Entero con 5 posiciones, llenarlo con información solicitada al usuario. Después de recoger toda la información, se requiere imprimir el índice de cada posición en el arreglo con su valor de la siguiente manera:
+        <br>[0] = 55<br>
+        [1] = 99<br>
+        [2] = 11<br>
+        [3] = 56<br>
+        [4] = 69</h3>
+        <pre>
+            <code>
+Proceso TallerArreglosUno
+	Definir vector Como Entero;
+	definir datos, datoPedido Como Caracter;
+	
+	Dimension datos[5]; 
+	Dimension datoPedido[5];
+	
+	datos[0]<-"[0]=";
+	datos[1]<-"[1]=";
+	datos[2]<-"[2]=";
+	datos[3]<-"[3]=";
+	datos[4]<-"[4]=";
+		
+	Para vector<-0 Hasta 4 Con Paso 1 Hacer
+		Escribir "Escribe un valor para el indice ",vector;
+		leer datoPedido[vector];
+	FinPara
+	Limpiar Pantalla;
+	para vector <-0 hasta 4 Hacer
+	
+			Escribir datos[vector], datoPedido[vector];
+	
+	FinPara
+
+FinProceso
+
+            </code>
+        </pre>
+        <h3>2. Crear un arreglo de números enteros de 20 posiciones, el cual, debe ser llenado con números aleatorios entre 1 y 100; después de haber llenado dicho arreglo, se debe volver a recorrer utilizando un ciclo diferente al que se usó para llenarse e imprimir los números pares e impares. Ejemplo
+            <br>Números pares: 2, 4, 6, 8, 10<br>
+            Números impares: 1, 3, 5, 7, 9</h3>
+            <pre>
+                <code>
+Proceso TallerArreglosDos
+	Definir posicion Como entero;
+	definir vector Como Entero;
+	Dimension vector[20];
+	
+	para posicion<-0 hasta 19 Hacer
+		vector[posicion]<-Aleatorio(0,100);
+		
+		
+	FinPara
+
+	Escribir "numeros Pares: " Sin Saltar;
+	para posicion<-0 hasta 19 Hacer
+		si vector[posicion]MOD(2)=0 Entonces
+			 Escribir vector[posicion] Sin Saltar, ", ";
+		FinSi
+	FinPara
+	Escribir "";
+	Escribir "numeros impares: " Sin Saltar;
+	para posicion<-0 hasta 19 Hacer
+		
+		si vector[posicion]MOD(2)=1 Entonces
+			Escribir vector[posicion] Sin Saltar, ", ";
+		FinSi
+	FinPara
+
+FinProceso
+                </code>
+            </pre>
+<h3>3. Imprimir los números primos del 1 al 1000, el resultado debe ser buscado de forma matemática.
+</h3>
+<pre>
+    <code>
+Proceso TallerArreglosTres
+	Definir num, numPrimo, alcance Como Entero;
+	
+	para alcance<-1 hasta 1000 Hacer
+		
+		si (alcance)MOD(2)<>0 y (alcance)MOD(3)<>0 y (alcance)MOD(5)<>0 y (alcance)MOD(7)<>0 y (alcance)MOD(11)<>0 Entonces
+			Escribir alcance;
+		FinSi
+		si alcance=2 o alcance=3 o alcance=5 o alcance=7 o alcance=11 Entonces
+			Escribir alcance;
+			
+		FinSi
+	FinPara
+	
+FinProceso
+    </code>
+</pre>
+<h3>4. Dada la siguiente matriz bidimensional, el cual debe de quemar en el código
+    <br>01 02 03 04 05<br>
+    06 07 08 09 10<br>
+    11 12 13 14 15<br>
+    16 17 18 19 20<br>
+    Utilizando el conocimiento adquirido, a excepción de hacerlo de forma manual, imprima la siguiente matriz bidimensional.<br>
+    01 02 03 04 05<br>
+    10 09 08 07 06<br>
+    11 12 13 14 15<br>
+    20 19 18 17 16</h3>
+    <pre>
+        <code>
+Proceso TallerArreglosCuatro
+		Definir fila, columna Como Entero;
+		definir matriz Como Caracter;
+		Dimension matriz[4,5]; 
+		
+	    matriz[0,0]<-"01";
+		matriz[0,1]<-"02";
+		matriz[0,2]<-"03";
+		matriz[0,3]<-"04";
+		matriz[0,4]<-"05";
+		matriz[1,0]<-"10";
+		matriz[1,1]<-"09";
+		matriz[1,2]<-"08";
+	    matriz[1,3]<-"07";
+		matriz[1,4]<-"06";
+		matriz[2,0]<-"11";
+		matriz[2,1]<-"12";
+		matriz[2,2]<-"13";
+		matriz[2,3]<-"14";
+		matriz[2,4]<-"15";
+		matriz[3,0]<-"20";
+	    matriz[3,1]<-"19";
+		matriz[3,2]<-"18";
+		matriz[3,3]<-"17";
+		matriz[3,4]<-"16";
+
+		para fila <-0 hasta 3 Hacer
+			para columna<-0 hasta 4 Hacer
+				Escribir matriz[fila,columna], " " Sin Saltar;
+			FinPara
+			Escribir "";
+		FinPara
+FinProceso
+        </code>
+    </pre>
+    <h3>5. Se debe de imprimir el siguiente cuadro
+    </h3>
+    <div class="puntoCincoArrelgo" id="puntoCincoArreglo">
+        <a href="/"><img src=CapturaArreglo.png alt="punto-cinco-arreglo"></a>                                        
+    </div>
+    <h3>El usuario deberá insertar la fila y columna de la cual desea ver el resultado, el resultado de cada celda debe estar previamente calculado en una matriz bidimensional la cual cada resultado obedecerá a la fila y columna insertada por el usuario.
+    </h3>
+    <pre>
+        <code>
+Proceso TallerArreglosCinco
+	Definir fila,filaDos, columna, columnaDos, matrizDos Como Entero;
+	definir matriz Como Caracter;
+	
+	Dimension matriz[10,10]; 
+	Dimension matrizDos[10,10];
+    matriz[0,0]<-"1x1";
+	matriz[0,1]<-"2x1";
+	matriz[0,2]<-"3x1";
+	matriz[0,3]<-"4x1";
+	matriz[0,4]<-"5x1";
+	matriz[0,5]<-"6x1";
+	matriz[0,6]<-"7x1";
+	matriz[0,7]<-"8x1";
+	matriz[0,8]<-"9x1";
+	matriz[0,9]<-"10x1";
+	matriz[1,0]<-"1x2";
+	matriz[1,1]<-"2x2";
+	matriz[1,2]<-"3x2";
+	matriz[1,3]<-"4x2";
+	matriz[1,4]<-"5x2";
+	matriz[1,5]<-"6x2";
+	matriz[1,6]<-"7x2";
+	matriz[1,7]<-"8x2";
+	matriz[1,8]<-"9x2";
+	matriz[1,9]<-"10x2";
+	matriz[2,0]<-"1x3";
+	matriz[2,1]<-"2x3";
+	matriz[2,2]<-"3x3";
+	matriz[2,3]<-"4x3";
+	matriz[2,4]<-"5x3";
+	matriz[2,5]<-"6x3";
+	matriz[2,6]<-"7x3";
+	matriz[2,7]<-"8x3";
+	matriz[2,8]<-"9x3";
+	matriz[2,9]<-"10x3";
+	matriz[3,0]<-"1x4";
+	matriz[3,1]<-"2x4";
+	matriz[3,2]<-"3x4";
+	matriz[3,3]<-"4x4";
+	matriz[3,4]<-"5x4";
+	matriz[3,5]<-"6x4";
+	matriz[3,6]<-"7x4";
+	matriz[3,7]<-"8x4";
+	matriz[3,8]<-"9x4";
+	matriz[3,9]<-"10x4";
+	matriz[4,0]<-"1x5";
+	matriz[4,1]<-"2x5";
+	matriz[4,2]<-"3x5";
+	matriz[4,3]<-"4x5";              
+	matriz[4,4]<-"5x5";
+	matriz[4,5]<-"6x5";
+	matriz[4,6]<-"7x5";
+	matriz[4,7]<-"8x5";
+	matriz[4,8]<-"9x5";
+	matriz[4,9]<-"10x5";
+	matriz[5,0]<-"1x6";
+	matriz[5,1]<-"2x6";
+	matriz[5,2]<-"3x6";
+	matriz[5,3]<-"4x6";
+	matriz[5,4]<-"5x6";
+	matriz[5,5]<-"6x6";
+	matriz[5,6]<-"7x6";
+	matriz[5,7]<-"8x6";
+	matriz[5,8]<-"9x6";
+	matriz[5,9]<-"10x6";
+	matriz[6,0]<-"1x7";
+	matriz[6,1]<-"2x7";
+	matriz[6,2]<-"3x7";
+	matriz[6,3]<-"4x7";
+	matriz[6,4]<-"5x7";
+	matriz[6,5]<-"6x7";
+	matriz[6,6]<-"7x7";
+	matriz[6,7]<-"8x7";
+	matriz[6,8]<-"9x7";
+	matriz[6,9]<-"10x7";
+	matriz[7,0]<-"1x8";
+	matriz[7,1]<-"2x8";
+	matriz[7,2]<-"3x8";
+	matriz[7,3]<-"4x8";
+	matriz[7,4]<-"5x8";
+	matriz[7,5]<-"6x8";
+	matriz[7,6]<-"7x8";
+	matriz[7,7]<-"8x8";
+	matriz[7,8]<-"9x8";
+	matriz[7,9]<-"10x8";
+	matriz[8,0]<-"1x9";
+	matriz[8,1]<-"2x9";
+	matriz[8,2]<-"3x9";
+	matriz[8,3]<-"4x9";
+	matriz[8,4]<-"5x9";
+	matriz[8,5]<-"6x9";
+	matriz[8,6]<-"7x9";
+	matriz[8,7]<-"8x9";
+	matriz[8,8]<-"9x9";
+	matriz[8,9]<-"10x9";
+	matriz[9,0]<-"1x10";
+	matriz[9,1]<-"2x10";
+	matriz[9,2]<-"3x10";
+	matriz[9,3]<-"4x10";
+	matriz[9,4]<-"5x10";
+	matriz[9,5]<-"6x10";
+	matriz[9,6]<-"7x10";
+	matriz[9,7]<-"8x10";
+	matriz[9,8]<-"9x10";
+	matriz[9,9]<-"10x10";
+
+	para fila <-0 hasta 8 Hacer
+		para columna<-0 hasta 9 Hacer
+			Escribir matriz[fila,columna], "   " Sin Saltar;
+			
+		FinPara
+		
+		Escribir "";
+	FinPara
+	para fila <-9 hasta 9 Hacer
+		para columna<-0 hasta 9 Hacer
+			Escribir matriz[fila,columna], "  " Sin Saltar;
+			
+		FinPara
+		
+		Escribir "";
+	FinPara
+	
+	Para filaDos<-0 hasta 9 Hacer
+		
+		Para columnaDos<-0 hasta 9 Hacer
+			matrizDos[filaDos,columnaDos]<-(filaDos+1)*(columnaDos+1);
+		FinPara
+	FinPara
+	
+	Escribir "escriba la fila que desea hallar (TENGA EN CUENTA QUE LA FILA INICIA DESDE 0)";
+	leer filaDos;
+	Escribir "escriba la columna que desa hallar (TENGA EN CUENTA QUE LA COLUMNA INICIA DESDE 0)";
+	leer columnaDos;
+	Escribir matrizDos[filaDos,columnaDos];
+FinProceso
+</code>
+    </pre>
+
+</body>
+</html>

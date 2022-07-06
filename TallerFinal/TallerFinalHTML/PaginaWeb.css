@@ -1,0 +1,41 @@
+#headerFrutas{
+    
+    margin: auto;
+    display: Block;
+    border-radius: 22px 22px 22px 22px;
+    
+}
+#headerFrutas h1{
+    width: 320px;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 10px 22px 22px 10px;
+    background-color: brown;
+    color: greenyellow;
+}
+#headerFrutas h2{
+    width: 500px;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 10px 22px 22px 10px;
+    background-color: brown;
+    color:greenyellow;}
+ #frutas{
+        width: 500px;
+        margin: auto;
+}
+.bodyFrutas{
+    background-color: #0d518a;
+}
+.estiloPar{
+    background-color: black;
+}
+.estiloImpar{
+    background-color: black;
+}
+.sogeking{
+    color: yellow;
+}
+.noShimate{
+    color: yellow;
+}
