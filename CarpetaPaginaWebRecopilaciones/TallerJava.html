@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller Java</title>
+    <link rel="stylesheet" href="EstiloPaginaWeb.css" type="text/css" />
+</head>
+
+<body>
+    <header>
+        <h1> Taller Java</h1>
+		<div id="Vuelta al portafolio" >
+			<p><a href="/TallerFinal/CarpetaPaginaWebRecopilaciones/PortafolioWeb.html">Portafolio Web</a></p>
+		  </div>
+    </header>
+    <h3>1. Realizar el taller #1 de PSeInt en Java</h3>
+    <h4>Taller Java variablesEimpresion 1</h4>
+    <pre>
+        <code>
+            package com.sofka.canteraUno;
+import java.util.Scanner;
+public class  TallerVariablesEImpresionUno {
+
+	public static void main (String[] args) {
+		String nombre, apellido;
+		
+		Scanner input = new Scanner(System.in);
+		System.out.println("Escriba su nombre");
+		
+		nombre = input.nextLine();
+		
+		System.out.println("Escriba su apellido");
+		apellido = input.nextLine();
+		System.out.println(nombre+" "+apellido);
+	}
+}
+        </code>
+    </pre>
+    <h4>Taller Java variablesEimpresion 2</h4>
+    <pre>
+        <code>
+            package com.sofka.canteraUno;
+import java.util.Scanner;
+public class TallerVariablesEImpresionDos {
+public static void main (String[] args) {
+	String nombre, apellido;
+	int edad;
+	float estatura;
+	Scanner input = new Scanner(System.in);
+	System.out.println("Escriba su nombre");
+	nombre = input.nextLine();
+	System.out.println("Escriba su apellido");
+	apellido = input.nextLine();
+	System.out.println("Escriba su edad");
+	edad = input.nextInt();
+	System.out.println("Escriba su estatura");
+	estatura = input.nextFloat();
+	
+	System.out.println("mi nombre es " + nombre + " " + apellido + " tengo " + edad + " años de edad " + "y mido " + estatura + " metros"  );
+}	
+}
+        </code>
+    </pre>
+    <h4>Taller Java variablesEimpresion 3</h4>
+    <pre>
+        <code>
+            package com.sofka.canteraUno;
+import java.util.Scanner;
+public class  TallerVariablesEImpresionTres {
+
+	public static void main (String[] args) {
+		Scanner input = new Scanner(System.in);
+		String nombre, nombrePadre, nombreMadre;
+		System.out.println("¿Cual es tu nombre completo?");
+		nombre = input.nextLine();
+		System.out.println("¿Cual es el nombre de tu padre?");
+		nombrePadre = input.nextLine();
+		System.out.println("¿Cual es el nombre de tu madre?");
+		nombreMadre = input.nextLine();
+		
+		System.out.println("Yo soy "+nombre+" soy hijo de "+nombrePadre+" y de "+nombreMadre);
+	}
+}
+        </code>
+    </pre>
+    <h4>Taller Java variablesEimpresion 4</h4>
+    <pre>
+        <code>
+            package com.sofka.canteraUno;
+import java.util.Scanner;
+public class  TallerVariablesEImpresionCuatro {
+	public static void main (String[] args) {
+		String ciudad, pais;
+		Scanner input= new Scanner(System.in);
+		
+		System.out.println("Escriba la capital de un pais");
+		ciudad = input.nextLine();
+		System.out.println("Escriba el pais del que es capital");
+		pais = input.nextLine();
+		
+		System.out.println("La ciudad "+ciudad+" es la capital de "+pais);
+		
+	}
+}
+        </code>
+    </pre>
+    <h4>Taller Java variablesEimpresion 5</h4>
+    <pre>
+        <code>
+            package com.sofka.canteraUno;
+import java.util.Scanner;
+public class  TallerVariablesEImpresionCinco {
+	public static void main (String[] args) {
+		Scanner input = new Scanner(System.in);
+		String nombreMascota, tipoMascota, nombreDueño;
+		int edadMascota;
+		
+		System.out.println("¿Cual es el nombre de la mascota?");
+		nombreMascota = input.nextLine();
+		System.out.println("¿Que tipo de mascota es?");
+		tipoMascota = input.nextLine();
+		System.out.println("¿Nombre del dueño de la mascota?");
+		nombreDueño = input.nextLine();
+		System.out.println("¿Cual es la edad de la mascota?");
+		edadMascota = input.nextInt();
+		
+	System.out.println(nombreMascota+" es un "+tipoMascota+" el cual tiene "+edadMascota+" años de edad "+ "y "+nombreDueño+" es el dueño de la mascota");
+	}
+}
+        </code>
+    </pre>
+    <h3>2. Realizar el taller #2 de PSeInt en Java
+    </h3>
+    <h4>Taller Java condicionales 1</h4>
+    <pre>
+        <code>
+            package com.sofka.canteraUno;
+import java.util.Scanner;
+public class TallerCondicionalesUno {
+
+	public static void main(String[] args) {
+		int edad;
+		Scanner input = new Scanner(System.in);
+		System.out.println("¿Cual es su edad?");
+		edad = input.nextInt();
+		
+		if (edad>=18) {
+			System.out.println("Usted es mayor de edad");
+			
+		}				
+	}
+}
+        </code>
+    </pre>
+    <h4>Taller Java condicionales 2</h4>
+    <pre>
+    <code>
+        package com.sofka.canteraUno;
+import java.util.Scanner;
+public class TallerCondicionalesDos {
+	public static void main(String[] args) {
+		int edad;
+		Scanner input = new Scanner(System.in);
+		System.out.println("¿Cual es su edad?");
+		edad = input.nextInt();
+		
+		if (edad>=18) {
+			System.out.println("Usted es mayor de edad");
+		}else {
+			System.out.println("Usted aun es un niño");
+		}				
+	}
+}
+    </code>
+</pre>
+    <h4>Taller Java condicionales 3</h4>
+    <pre>
+        <code>
+            package com.sofka.canteraUno;
+import java.util.Scanner;
+public class TallerCondicionalesTres {
+	public static void main(String[] args) {
+		int edad;
+		String nombre, apellido;
+		Scanner input = new Scanner(System.in);
+		System.out.println("¿Cual es su nombre?");
+		nombre = input.nextLine();
+		System.out.println("¿Cual es su apellido?");
+		apellido = input.nextLine();
+		System.out.println("¿Cual es su edad?");
+		edad = input.nextInt();
+		
+		if (edad>=18) {
+			System.out.println(nombre+" "+apellido+" ud puede entrar a la fiesta");
+		}else {
+			System.out.println(nombre+" "+apellido+" ud es menor de edad y por lo tanto no puede ingresar a la fiesta, por favor devuelvase a su casa");
+			
+		}
+	}
+}
+        </code>
+    </pre>
+    <h4>Taller Java condicionales 4</h4>
+    <pre>
+        <code>
+            package com.sofka.canteraUno;
+import java.util.Scanner;
+public class TallerCondicionalesCuatro {
+	public static void main(String[] args) {
+		String pelicula, novedad;
+		int opcion;
+		boolean peliculaCapturada;
+		peliculaCapturada=false;
+		Scanner input = new Scanner(System.in);
+		Scanner inputDos = new Scanner(System.in);
+		
+		System.out.println("Elija una opcion");
+		System.out.println("1. Alquila una pelicula");
+		System.out.println("2. Consultar peliculas disponibles");
+		System.out.println("3. Recibir peliucla en la videotienda");
+		System.out.println("4. Peticion, queja, reclamo o novedad");
+		opcion = input.nextInt();
+				
+		switch(opcion){
+		case 1:
+			System.out.println("Disfruta tu pelicula");
+			break;
+		case 2:
+			if (peliculaCapturada=true){
+				System.out.println("pelicula disponible");
+			}else{
+					System.out.println("¿Que pelicula quieres consultar?");
+					pelicula = inputDos.nextLine();
+					}
+					break;
+		case 3:
+			
+				System.out.println("Puede acercarse a nuestra sucursal");
+				break;
+		case 4:
+			System.out.println("¿Cual es su novedad?");
+			novedad = inputDos.nextLine();
+		
+			break;
+			
+			default:
+				System.out.println("Opcion no valida");										
+			}			
+		}
+	}
+        </code>
+    </pre>
+    <h4>Taller Java condicionales 5</h4>
+    <pre>
+        <code>
+            package com.sofka.canteraUno;
+import java.util.Scanner;
+public class TallerCondicionalesCinco {
+	public static void main(String[] args) {
+	Scanner input = new Scanner(System.in);
+	Scanner inputDos = new Scanner(System.in);
+		String producto;
+		float precio;
+		int opcion;
+		boolean productoCapturado;
+		precio=10000;
+		productoCapturado=false;
+		
+		System.out.println("Elija una opcion");
+		System.out.println("1. Adquirir un producto");
+		System.out.println("2. Devolucion de producto");
+		System.out.println("3. Salir sistema");
+		opcion = input.nextInt();
+		
+		switch(opcion) {
+		case 1:
+			System.out.println("¿Que producto desea adquirir");
+			producto = inputDos.nextLine();
+			System.out.println("El producto "+producto+" cuesta: "+precio);
+			break;
+		case 2:
+			System.out.println("Lamentamos las molestias");
+			break;
+		case 3:
+			System.out.println("Vuelva pronto");
+			break;
+		}	
+	}
+}
+        </code>
+    </pre>
+    <h4>Taller Java condicionales 6</h4>
+    <pre>
+        <code>
+            package com.sofka.canteraUno;
+            import java.util.Scanner;            
+            public class TallerCondicionalesSeis {
+                public static void main(String[] args) {
+                    Scanner input = new Scanner(System.in);
+                    Scanner inputDos = new Scanner(System.in);	
+                    String placa, novedad, repuesto;
+                    int opcion;
+                    boolean registro;
+                    
+                    registro=false;
+                    
+                    System.out.println("Motos El Maquinista, elija una opcion");
+                    System.out.println("1. Placa para ingreso");
+                    System.out.println("2. Placa para salida");
+                    System.out.println("3. Repuestos utilizados");
+                    opcion = input.nextInt();
+                    
+                    switch(opcion) {
+                    case 1:
+                        System.out.println("Escriba la placa");
+                        placa = inputDos.nextLine();
+                        System.out.println("Escriba la novedad");
+                        novedad = inputDos.nextLine();
+                        System.out.println(placa+" Observaciones dadas por el cliente "+novedad);
+                        break;
+                    case 2:
+                        System.out.println("Escriba la placa");
+                        placa = inputDos.nextLine();
+                        System.out.println("Escriba las reparaciones realizadas y respuestos cambiados");
+                        novedad = inputDos.nextLine();
+                        System.out.println("La moto de placa: "+placa+" se le realizaro las siguientes modificaciones: "+novedad);
+                        
+                        break;
+                    case 3:
+                        System.out.println("Escriba la placa");
+                        placa = inputDos.nextLine();
+                        System.out.println("¿Que repuestos utilizó?]");
+                        repuesto = inputDos.nextLine();
+                        System.out.println("Los siguientes repuestos fueron utilizados"+repuesto);
+                        break;
+                    }
+                    }            
+            }              
+        </code>
+    </pre>
+    <h4>Taller Java condicionales 7</h4>
+    <pre>
+        <code>
+            package com.sofka.canteraUno;
+import java.util.Scanner;
+public class TallerCondicionalesSiete {
+	public static void main(String[] args) {
+		Scanner input= new Scanner(System.in);
+		Scanner inputDos= new Scanner(System.in);
+		float peso, estatura, imc, numero;
+				
+		System.out.println("Digite aquí su peso en kilogramos");
+		peso = input.nextFloat();
+		System.out.println("Digite aqui su estatura en metros");
+		estatura = inputDos.nextFloat();
+		
+		imc=(peso/(estatura*estatura));
+		if (imc < 18.5){
+			System.out.println("Su imc es de "+imc+" por lo tanto usted está debajo del peso normal.");			
+		}
+		if (18.5<=imc^imc < 25 ) {
+			System.out.println("Su imc es de "+imc+" por lo tanto usted está en el peso normal." );
+			
+		}
+		if (25<=imc^imc < 30) {
+			System.out.println("su imc es de "+imc+" por lo tanto usted está en sobre peso");
+		}
+		if (30<=imc) {
+			System.out.println("Su imc es de "+imc+" por lo tanto usted está obeso.");		
+		}
+	}
+}
+        </code>
+    </pre>
+    <h4>Taller Java condicionales 8</h4>
+    <pre>
+        <code>
+            package com.sofka.canteraUno;
+import java.util.Scanner;
+public class TallerCondicionalesOcho {
+	public static void main(String[] args) {
+		Scanner input= new Scanner(System.in);
+		Scanner inputDos= new Scanner(System.in);
+		Scanner inputTres= new Scanner(System.in);
+		String sabor, decoraciones;
+		int cantidad, tortasDisponibles, ventasDiarias, opcion;
+		
+		System.out.println("Bienvenidos a tortas Don carlos ¿Enq ue podemos ayudarlo?");
+		System.out.println("1. Tomar pedido");
+		System.out.println("2. Tortas disponibles");
+		System.out.println("3. Ventas diarias");
+		opcion = input.nextInt();
+		
+		switch(opcion) {
+		case 1:
+			System.out.println("¿Que sabor desea llevar?");
+			sabor = inputDos.nextLine();
+			System.out.println("¿De cuantas porciones la necesita?");
+			cantidad = inputDos.nextInt();
+			System.out.println("¿Que decoracion desea?");
+			decoraciones = inputTres.nextLine();
+			
+			System.out.println("Su orden saldrá en un momento");
+			break;
+		case 2:
+			System.out.println("Tenemos disponibilidad en todas nuestras tortas");
+			break;
+		case 3:
+			System.out.println("Registre el numero de ventas realizadas el dia de hoy");
+			ventasDiarias = inputDos.nextInt();
+			System.out.println("Se han añadido "+ventasDiarias+" nuevas el dia de hoy" );
+			break;
+			
+		}
+	}
+}
+        </code>
+    </pre>
+    <h4>Taller Java condicionales 9</h4>
+    <pre>
+        <code>
+            package com.sofka.canteraUno;
+import java.util.Scanner;
+public class TallerCondicionalesNueve {
+	public static void main(String[] args) {
+		Scanner input= new Scanner(System.in);
+		Scanner inputDos= new Scanner(System.in);
+		int opcion;
+		float base, altura, areaTriangulo, areaRectangulo,areaTrapecio, baseMenor, baseMayor;
+		
+		System.out.println("¿Que poligono desea calcular?");
+		System.out.println("1. Tringulo");
+		System.out.println("2. Rectangulo");
+		System.out.println("Trapecio");
+		opcion= input.nextInt();
+		
+		switch(opcion) {
+		case 1:
+			System.out.println("Digite la altura");
+			altura = inputDos.nextFloat();
+			System.out.println("Digite base");
+			base = inputDos.nextFloat();
+			areaTriangulo=((base*altura)/2);
+			System.out.println("El area del triangulo es "+areaTriangulo);
+			break;
+		case 2:
+			System.out.println("Digite la altura");
+			altura = inputDos.nextFloat();
+			System.out.println("Digite base");
+			base = inputDos.nextFloat();
+			areaRectangulo=(base*altura);
+			System.out.println("El area del recangulo es "+areaRectangulo);
+			break;
+		case 3:
+			System.out.println("Digite la altura");
+			altura = inputDos.nextFloat();
+			System.out.println("Digite base menor");
+			baseMenor = inputDos.nextFloat();
+			System.out.println("Digite base mayor");
+			baseMayor = inputDos.nextFloat();
+			areaTrapecio=((baseMayor+baseMenor)/2)*altura;
+			System.out.println("El area del trapecio es "+areaTrapecio);
+			break;			
+		}
+	}
+}
+        </code>
+    </pre>
+    <h4>Taller Java condicionales 10</h4>
+    <pre>
+        <code>
+            package com.sofka.canteraUno;
+import java.util.Scanner;
+public class TallerCondicionalesDiez {
+	public static void main(String[] args) {
+		Scanner input= new Scanner(System.in);
+		Scanner inputDos= new Scanner(System.in);
+		String titular;
+		float saldo, ingreso, retiro;
+		int opcion;
+		saldo=100000;
+		
+		System.out.println("Favor poner el nombre del titular");
+		titular = input.nextLine();
+		
+		System.out.println("Hola "+titular+"¿Que deseas hacer hoy?");
+		System.out.println("1. Ingresar dinero");
+		System.out.println("2. Retirar dinero");
+		System.out.println("3. Consultar saldo");
+		opcion = input.nextInt();
+		
+		switch(opcion) {
+		case 1:
+			System.out.println("Ingrese el monto que desea consignar");
+			ingreso = inputDos.nextFloat();
+			
+			System.out.println("Su saldo despues de la consigna es: "+(saldo+ingreso));
+			break;
+		case 2:
+			System.out.println("Ingrese el monto que desea retirar");
+			retiro = inputDos.nextFloat();
+			if (saldo< retiro) {
+				System.out.println("Saldo insuficiente para realizar el retiro");
+			}else {
+				System.out.println("Su saldo despues del retiro es de "+(saldo-retiro));
+				
+			}break;
+		case 3:
+			System.out.println("Su saldo actual es de "+saldo);
+			break;			
+		}
+	}
+}
+        </code>
+    </pre>
+    <h3>3. Realizar el taller #3 de PSeInt en Java
+    </h3>
+    <h4>Taller Java ciclos 1</h4>
+    <pre>
+        <code>
+            package TallerCiclos;
+public class TallerCiclosUno {
+	public static void main(String[] args) {
+		int a, b, c;
+		c=10;
+		
+		for (a=1; a<=10; a++){
+			if (a>1) {
+			}
+		for (b=1; b<=a ;b++) {
+			System.out.print("*");
+			}
+		if (a==10) {		
+		}
+		System.out.println("");
+		}
+	}
+}
+        </code>
+    </pre>
+    <h4>Taller Java ciclos 2</h4>
+    <pre>
+        <code>
+            package TallerCiclos;
+public class TallerCilcosDos {
+	public static void main(String[] args) {
+		int asterisco, espacio, i, j;
+		espacio=10;
+		asterisco=1;
+		
+		while (espacio!=0) {
+			for (i=1; i<=espacio; i++) {
+			System.out.print(" ");
+			}
+			for (j=1; j<=asterisco;  j++) {
+				System.out.print("*");
+			}
+			System.out.println("");
+			espacio--;
+			asterisco++;	
+			}
+			}
+		}
+        </code>
+    </pre>
+    <h4>Taller Java ciclos 3</h4>
+    <pre>
+        <code>
+            package TallerCiclos;
+public class TallerCiclosTres {
+	public static void main(String[] args) {
+		int asterisco, asteriscoDos, asteriscoTres, asteriscoCuatro;
+		int espacio, espacioDos, espacioTres, espacioCuatro;
+		int i, ii, iii, iiii;
+		int j, jj, jjj, jjjj;
+		boolean detener, detenerDos;
+
+		espacio=10;
+		asterisco=1;
+		espacioDos=10;
+		asteriscoDos=1;
+
+	do {
+		do {
+			while (espacio!=0) {
+				
+				for (i=1; i<=espacio; i++) {
+				System.out.print(" ");
+				}
+				for (j=1; j<=asterisco;  j++) {
+					System.out.print("*");
+				}
+				espacio--;
+				asterisco++;
+				espacioDos=10;
+				while (espacioDos!=0) {
+					for (jj=2; jj<=asteriscoDos; jj++) {
+					System.out.print("*");
+					}
+					for (ii=1; ii<=espacioDos;  ii++) {
+						System.out.print(" ");
+					}
+					System.out.println("");
+					espacioDos--;
+					asteriscoDos++;
+					espacioDos=0;					
+				}
+			}			
+		}while (espacio!=0);
+	}while (espacioDos!=0);
+	espacioTres=9;
+	asteriscoTres=1;
+	espacioCuatro=3;
+	asteriscoCuatro=2;
+	do {
+		do {
+			while (espacioTres>=6) {
+				
+				for (i=1; i<=espacioTres; i++) {
+				System.out.print(" ");
+				}
+				for (j=1; j<=asteriscoTres;  j++) {
+					System.out.print("*");
+				}
+				espacioTres--;
+				asteriscoTres++;
+				espacioCuatro=10;
+				while (espacioCuatro!=0) {
+					for (jj=1; jj<=asteriscoCuatro; jj++) {
+					System.out.print("*");
+					}
+					for (ii=1; ii<=espacioCuatro;  ii++) {
+						System.out.print(" ");
+					}
+					System.out.println("");
+					espacioCuatro--;
+					asteriscoCuatro++;
+					espacioCuatro=0;
+					
+				}
+			}			
+		}while (espacioTres!=0);
+	}while (espacioCuatro!=0);
+	}
+}	
+        </code>
+    </pre>
+    <h4>Taller Java ciclos 4</h4>
+    <pre>
+        <code>
+            package TallerCiclos;
+public class TalerCiclosCuatro {
+	public static void main(String[] args) {
+		int a,b, c;
+		
+		for (a=1;a<=10; a++) {
+			if (a>=1) {
+				b=5;
+				c=a*b;
+				System.out.println(a+" * "+b+" = "+c);
+			}
+		}
+	}
+}
+        </code>
+    </pre>
+    <h4>Taller Java ciclos 5</h4>
+    <pre>
+        <code>
+            package TallerCiclos;
+import java.util.Scanner;
+public class TallerCiclosCinco {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		Scanner inputDos = new Scanner(System.in);
+		int opcion;
+		String nombre;
+		nombre="";
+
+		do {
+			do {
+				System.out.println("Seleccione una opcion");
+				System.out.println("1. Capturar nombre");
+				System.out.println("2. Saludar");
+				System.out.println("3. Salir del sistema");
+				opcion = input.nextInt();
+				
+				switch(opcion) {
+				
+				case 1:
+					System.out.println("Escriba su nombre");
+					nombre = inputDos.nextLine();
+
+					break;
+				case 2:
+					if (nombre!="") {
+						System.out.println("Hola "+nombre);
+					}else {
+						System.out.println("Por favor digite un nombre para saludar");
+					}
+
+					break;
+				case 3: 
+
+					System.out.println("Vuelva pronto");
+				break;
+				default:
+					System.out.println("opcion invalida");				
+				}
+			}while(opcion!=3);
+			}while(opcion!=3);
+}
+}
+        </code>
+    </pre>
+    <h4>Taller Java ciclos 6</h4>
+    <pre>
+        <code>
+            package TallerCiclos;
+            import java.util.Scanner;
+            public class TallerCiclosSeis {
+                public static void main(String[] args) {
+                    Scanner input = new Scanner(System.in);
+                    Scanner inputNombre = new Scanner(System.in);
+                    Scanner inputNumero = new Scanner(System.in);
+                    Scanner inputOrganizacion = new Scanner(System.in);
+                    String nombreUno, nombreDos, nombreTres;
+                    String organizacionUno = null, organizacionDos=null,organizacionTres=null;
+                    int telefonoUno=0, telefonoDos=0 , telefonoTres=0;
+                    int opcion;
+                    nombreUno="";
+                    nombreDos="";
+                    nombreTres="";
+                    
+                    do {
+                        do{
+                            System.out.println("Seleccione una opcion");
+                            System.out.println("1. Añadir Contactos");
+                            System.out.println("2. Buscar Contacto");
+                            System.out.println("3. Eliminar un contacto");
+                            System.out.println("4. Salir");
+                            opcion = input.nextInt();
+                            
+                        switch(opcion) {
+                        case 1:
+                            if (nombreUno=="") {
+                                System.out.println("escriba el nombre que desea añadir");
+                                nombreUno=inputNombre.nextLine();
+                                System.out.println("escriba el numero telefonico del contacto");
+                                telefonoUno = inputNumero.nextInt();
+                                System.out.println("Escriba la organizacion a la que pertenece");
+                                organizacionUno = inputOrganizacion.nextLine();
+                                break;
+                            }
+                            if (nombreDos=="") {
+                                System.out.println("escriba el nombre que desea añadir");
+                                nombreDos=inputNombre.nextLine();
+                                System.out.println("escriba el numero telefonico del contacto");
+                                telefonoDos = inputNumero.nextInt();
+                                System.out.println("Escriba la organizacion a la que pertenece");
+                                organizacionDos = inputOrganizacion.nextLine();
+                                break;
+                            }
+                            if (nombreTres=="") {
+                                System.out.println("escriba el nombre que desea añadir");
+                                nombreTres=inputNombre.nextLine();
+                                System.out.println("escriba el numero telefonico del contacto");
+                                telefonoTres = inputNumero.nextInt();
+                                System.out.println("Escriba la organizacion a la que pertenece");
+                                organizacionTres = inputOrganizacion.nextLine();
+                                break;
+                            }
+                        case 2:
+                            if (nombreUno!="") {
+                                System.out.println("1. "+nombreUno);
+                            }
+                            if (nombreDos!="") {
+                                System.out.println("2. "+nombreDos);
+                            }
+                            if (nombreTres!="") {
+                                System.out.println("3. "+nombreTres);
+                            }
+                            if (nombreUno=="" && nombreDos=="" && nombreTres=="") {
+                                System.out.println("no hay numeros almacenados, será devuelto al inicio");
+                                break;
+                            }
+                                if( nombreUno!="" ||  nombreDos!="" || nombreTres!="") {
+                                    opcion = input.nextInt();
+                                }	
+                                switch(opcion) {
+                                case 1:
+                                    if (nombreUno!="") {
+                                        System.out.println("Nombre: "+nombreUno);
+                                        System.out.println(telefonoUno);
+                                        System.out.println(organizacionUno);
+                                        break;
+                                    }else {
+                                        System.out.println("No hay dato almacenado, será devuelto al incio");
+                                        break;
+            
+                                }
+                                case 2:
+                                    if (nombreDos!="") {
+                                        System.out.println("Nombre: "+nombreDos);
+                                        System.out.println(telefonoDos);
+                                        System.out.println(organizacionDos);
+                                        break;
+                                    }else {
+                                        System.out.println("No hay dato almacenado, será devuelto al incio");
+                                        break;
+            
+                                }
+                                case 3:
+                                    if (nombreTres!="") {
+                                        System.out.println("Nombre: "+nombreTres);
+                                        System.out.println(telefonoTres);
+                                        System.out.println(organizacionTres);
+                                        break;
+                                    }else {
+                                        System.out.println("No hay dato almacenado, será devuelto al incio");
+                                        break;
+            
+                                }
+                                default:
+                                    break;
+                                }
+                        case 3:
+                            if (nombreUno!="") {
+                                System.out.println("1. "+nombreUno);
+                            }
+                            if (nombreDos!="") {
+                                System.out.println("2. "+nombreDos);
+                            }
+                            if (nombreTres!="") {
+                                System.out.println("3. "+nombreTres);
+                            }
+                            if (nombreUno=="" && nombreDos=="" && nombreTres=="") {
+                                System.out.println("no hay numeros almacenados, será devuelto al inicio");
+                                break;
+                            }
+                                if( nombreUno!="" ||  nombreDos!="" || nombreTres!="") {
+                                    opcion = input.nextInt();
+                                    
+                            
+                            }
+                                switch(opcion) {
+                                case 1:
+                                    nombreUno="";
+                                    telefonoUno=0;
+                                    organizacionUno=null;
+                                    break;
+                                case 2:
+                                    nombreDos="";
+                                    telefonoDos=0;
+                                    organizacionDos=null;
+                                    break;
+                                case 3:
+                                    nombreTres="";
+                                    telefonoTres=0;
+                                    organizacionTres=null;
+                                    break;
+                                default:
+                                    break;
+                                    
+                                }
+                        case 4:
+                            break;
+                            default:
+                                System.out.println("opcion no valida");                            
+                                }
+            
+                        }while(opcion!=4);
+                    }while(opcion!=4);
+            }            
+                }                        
+        </code>
+    </pre>
+    <h4>Taller Java ciclos 7</h4>
+    <pre>
+        <code>
+            package TallerCiclos;
+import java.util.Scanner;
+public class TallerCiclosSiete {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		Scanner inputMarca = new Scanner(System.in);
+		Scanner inputNombre = new Scanner(System.in);
+		Scanner inputPlaca = new Scanner(System.in);
+		Scanner inputTelefono = new Scanner(System.in);
+		String placaUno="", placaDos="", placaTres="", placaCuatro="", placaCinco="";
+		String marcaUno="", marcaDos="", marcaTres="", marcaCuatro="", marcaCinco="";
+		String nombreUno="", nombreDos="", nombreTres="", nombreCuatro="", nombreCinco="";
+		int telefonoUno=0, telefonoDos=0, telefonoTres=0, telefonoCuatro=0, telefonoCinco=0;
+		int opcion, placaBuscar;
+		
+		do {
+			do {
+			System.out.println("Seleccione una opcion");
+			System.out.println("1. Registrar placa para ingresar al parqueadero");
+			System.out.println("2. Buscar placa");
+			System.out.println("3. Retirar placa que saldrá del parqueadero");
+			System.out.println("4. Salir");
+				opcion = input.nextInt();
+				
+				switch(opcion) {
+				case 1:
+					if (placaUno=="") {
+						System.out.println("Escriba la placa que desea registrar");
+						placaUno = inputPlaca.nextLine();
+						System.out.println("Escriba marca del vehiculo");
+						marcaUno = inputMarca.nextLine();
+						System.out.println("Escriba numero telefonico de contacto");
+						telefonoUno = inputTelefono.nextInt();
+						System.out.println("Escriba nombre del dueño del vehiculo");
+						nombreUno = inputNombre.nextLine();
+						break;
+					}
+					if (placaDos=="") {
+						System.out.println("Escriba la placa que desea registrar");
+						placaDos = inputPlaca.nextLine();
+						System.out.println("Escriba marca del vehiculo");
+						marcaDos = inputMarca.nextLine();
+						System.out.println("Escriba numero telefonico de contacto");
+						telefonoDos = inputTelefono.nextInt();
+						System.out.println("Escriba nombre del dueño del vehiculo");
+						nombreDos = inputNombre.nextLine();
+						break;
+					}
+					if (placaTres=="") {
+						System.out.println("Escriba la placa que desea registrar");
+						placaTres = inputPlaca.nextLine();
+						System.out.println("Escriba marca del vehiculo");
+						marcaTres = inputMarca.nextLine();
+						System.out.println("Escriba numero telefonico de contacto");
+						telefonoTres = inputTelefono.nextInt();
+						System.out.println("Escriba nombre del dueño del vehiculo");
+						nombreTres = inputNombre.nextLine();
+						break;
+					}
+					if (placaCuatro=="") {
+						System.out.println("Escriba la placa que desea registrar");
+						placaCuatro = inputPlaca.nextLine();
+						System.out.println("Escriba marca del vehiculo");
+						marcaCuatro = inputMarca.nextLine();
+						System.out.println("Escriba numero telefonico de contacto");
+						telefonoCuatro = inputTelefono.nextInt();
+						System.out.println("Escriba nombre del dueño del vehiculo");
+						nombreCuatro = inputNombre.nextLine();
+						break;
+					}
+					if (placaCinco=="") {
+						System.out.println("Escriba la placa que desea registrar");
+						placaCinco = inputPlaca.nextLine();
+						System.out.println("Escriba marca del vehiculo");
+						marcaCinco = inputMarca.nextLine();
+						System.out.println("Escriba numero telefonico de contacto");
+						telefonoCinco = inputTelefono.nextInt();
+						System.out.println("Escriba nombre del dueño del vehiculo");
+						nombreCinco = inputNombre.nextLine();
+						break;
+					}										
+					break;
+				case 2:
+					if (placaUno!="") {
+						System.out.println("1. "+placaUno);
+					}
+					if (placaDos!="") {
+						System.out.println("2. "+placaDos);
+					}
+					if (placaTres!="") {
+						System.out.println("3. "+placaTres);
+					}
+					
+					if (placaCuatro!="") {
+						System.out.println("4. "+placaCuatro);
+					}
+					if (placaCinco!="") {
+						System.out.println("5. "+placaCinco);
+					}
+					if (placaUno=="" && placaDos=="" && placaTres==""&& placaCuatro==""&& placaCinco=="") {
+						System.out.println("no hay placas almacenadas, será devuelto al inicio");
+						break;
+					}
+					if (placaUno!="" || placaDos!="" || placaTres!=""|| placaCuatro!=""|| placaCinco!="") {
+						opcion = input.nextInt();
+					}
+						switch(opcion) {
+						case 1:
+							if (placaUno!="") {
+								System.out.println("placa: "+placaUno);
+								System.out.println("marca: "+marcaUno);
+								System.out.println("telefono: "+telefonoUno);
+								System.out.println("nombre: "+nombreUno);
+								break;
+							}else {
+								System.out.println("No hay placa almacenada, será devuelto al incio");
+								break;
+						}
+							
+						case 2:
+							if (placaDos!="") {
+								System.out.println("placa: "+placaDos);
+								System.out.println("marca: "+marcaDos);
+								System.out.println("telefono: "+telefonoDos);
+								System.out.println("nombre: "+nombreDos);
+								break;
+							}else {
+								System.out.println("No hay placa almacenada, será devuelto al incio");
+								break;
+						}
+						case 3:
+							if (placaTres!="") {
+								System.out.println("placa: "+placaTres);
+								System.out.println("marca: "+marcaTres);
+								System.out.println("telefono: "+telefonoTres);
+								System.out.println("nombre: "+nombreTres);
+								break;
+							}else {
+								System.out.println("No hay placa almacenada, será devuelto al incio");
+								break;
+						}
+									
+						case 4:
+							if (placaCuatro!="") {
+								System.out.println("placa: "+placaCuatro);
+								System.out.println("marca: "+marcaCuatro);
+								System.out.println("telefono: "+telefonoCuatro);
+								System.out.println("nombre: "+nombreCuatro);
+								break;
+							}else {
+								System.out.println("No hay placa almacenada, será devuelto al incio");
+								break;
+						}
+									
+						case 5:
+							if (placaCinco!="") {
+								System.out.println("placa: "+placaCinco);
+								System.out.println("marca: "+marcaCinco);
+								System.out.println("telefono: "+telefonoCinco);
+								System.out.println("nombre: "+nombreCinco);
+								break;
+							}else {
+								System.out.println("No hay placa almacenada, será devuelto al incio");
+								break;
+							}
+								default:
+									break;									
+						}
+						break;
+					case 3:
+						if (placaUno!="") {
+							System.out.println("1. "+placaUno);
+						}
+						if (placaDos!="") {
+							System.out.println("2. "+placaDos);
+						}
+						if (placaTres!="") {
+							System.out.println("3. "+placaTres);
+						}
+						
+						if (placaCuatro!="") {
+							System.out.println("4. "+placaCuatro);
+						}
+						if (placaCinco!="") {
+							System.out.println("5. "+placaCinco);
+						}
+						if (placaUno=="" && placaDos=="" && placaTres==""&& placaCuatro==""&& placaCinco=="") {
+							System.out.println("no hay placas almacenadas, será devuelto al inicio");
+							break;
+						}
+						if (placaUno!="" || placaDos!="" || placaTres!=""|| placaCuatro!=""|| placaCinco!="") {
+							opcion = input.nextInt();
+						}
+						switch(opcion) {
+						case 1:
+							placaUno="";
+							marcaUno="";
+							telefonoUno=0;
+							nombreUno="";
+							break;
+							
+						case 2:
+							placaDos="";
+							marcaDos="";
+							telefonoDos=0;
+							nombreDos="";
+							break;
+						case 3:
+							placaTres="";
+							marcaTres="";
+							telefonoTres=0;
+							nombreTres="";
+							break;
+						case 4:
+							placaCuatro="";
+							marcaCuatro="";
+							telefonoCuatro=0;
+							nombreCuatro="";
+							break;
+							
+						case 5:
+							placaCinco="";
+							marcaCinco="";
+							telefonoCinco=0;
+							nombreCinco="";
+							break;
+							default:
+								break;													
+						}					
+						break;						
+					case 4:
+						break;
+						
+						default:
+							break;	
+				}
+			}while(opcion!=4);
+		}while(opcion!=4);
+	}
+}
+        </code>
+    </pre>
+    <h4>Taller Java ciclos 8</h4>
+    <pre>
+        <code>
+            package TallerCiclos;
+
+import java.util.Scanner;
+
+public class TallerCiclosOcho {
+
+	public static void main(String[] args) {
+		Scanner input= new Scanner(System.in);
+		Scanner inputNombre= new Scanner(System.in);
+		Scanner inputAprobado= new Scanner(System.in);
+		String nombreUno, nombreDos, nombreTres, nombreCuatro, nombreCinco, nombreSeis, nombreSiete, nombreOcho;
+		boolean aprobadoUno, aprobadoDos, aprobadoTres, aprobadoCuatro, aprobadoCinco, aprobadoSeis, aprobadoSiete, aprobadoOcho;
+		int opcion;
+		nombreUno="";
+		nombreDos="";
+		nombreTres="";
+		nombreCuatro="";
+		nombreCinco="";
+		nombreSeis="";
+		nombreSiete="";
+		nombreOcho="";						
+		do {
+			do {
+				System.out.println( "Seleccione una opcion");
+				System.out.println( "1. Registrar ingreso de Estudiante");
+				System.out.println( "2. Dar calificacion");
+				System.out.println( "3. Buscar si aprobó o no");
+				System.out.println( "4. Salir");
+				opcion = input.nextInt();
+				
+				switch(opcion) {
+				case 1:
+					if (nombreUno=="") {
+						System.out.println("Escriba el nombre que desea registrar");
+						nombreUno = inputNombre.nextLine();
+						break;
+						
+					}
+					if (nombreDos=="") {
+						System.out.println("Escriba el nombre que desea registrar");
+						nombreDos = inputNombre.nextLine();
+						break;
+					}
+					if (nombreTres=="") {
+						System.out.println("Escriba el nombre que desea registrar");
+						nombreTres = inputNombre.nextLine();
+						break;
+					}
+					if (nombreCuatro=="") {
+						System.out.println("Escriba el nombre que desea registrar");
+						nombreCuatro = inputNombre.nextLine();
+						break;
+					}
+					if (nombreCinco=="") {
+						System.out.println("Escriba el nombre que desea registrar");
+						nombreCinco = inputNombre.nextLine();
+						break;
+					}
+					if (nombreSeis=="") {
+						System.out.println("Escriba el nombre que desea registrar");
+						nombreSeis = inputNombre.nextLine();
+						break;
+					}
+					if (nombreSiete=="") {
+						System.out.println("Escriba el nombre que desea registrar");
+						nombreSiete = inputNombre.nextLine();
+						break;
+					}
+					if (nombreOcho=="") {
+						System.out.println("Escriba el nombre que desea registrar");
+						nombreOcho = inputNombre.nextLine();
+						break;
+					}
+					
+				case 2:
+					if (nombreUno != "") {
+					System.out.println("1. "+nombreUno);
+						}
+						
+					if (nombreDos != "") {
+						System.out.println("2. "+nombreDos);
+							}
+					if (nombreTres != "") {
+						System.out.println("3. "+nombreTres);
+							}
+					if (nombreCuatro != "") {
+						System.out.println("4. "+nombreCuatro);
+							}
+					if (nombreCinco != "") {
+						System.out.println("5. "+nombreCinco);
+							}
+					if (nombreSeis != "") {
+						System.out.println("6. "+nombreSeis);
+							}
+					if (nombreSiete != "") {
+						System.out.println("7. "+nombreSiete);
+							}
+					if (nombreOcho != "") {
+						System.out.println("8. "+nombreOcho);
+							}
+					if (nombreUno=="" && nombreDos=="" && nombreTres=="" && nombreCuatro=="" && nombreCinco=="" && nombreSeis=="" && nombreSiete=="" && nombreOcho=="") {
+							System.out.println("No hay nombres almacenadas");
+							System.out.println("Será devuelto al menú de inicio");
+							break;
+							
+						}
+					if(nombreUno!="" || nombreDos!="" || nombreTres!="" || nombreCuatro!="" || nombreCinco!="" || nombreSeis!="" || nombreSiete!="" || nombreOcho!="") {
+						opcion = input.nextInt();
+						
+						switch(opcion) {
+						
+						case 1:
+							if (nombreUno!="") {
+								System.out.println(nombreUno);
+								System.out.println("Escriba true si el estudiante fue aprobado, de lo contrario escriba false");
+								aprobadoUno = inputAprobado.nextBoolean();
+								break;
+							}else {
+								System.out.println("no hay dato almacenado");
+								break;
+							}
+							
+						case 2:
+							if (nombreDos!="") {
+								System.out.println(nombreDos);
+								System.out.println("Escriba true si el estudiante fue aprobado, de lo contrario escriba false");
+								aprobadoDos = inputAprobado.nextBoolean();
+								break;
+							}else {
+								System.out.println("no hay dato almacenado");
+								break;
+							}
+						case 3:
+							if (nombreTres!="") {
+								System.out.println(nombreTres);
+								System.out.println("Escriba true si el estudiante fue aprobado, de lo contrario escriba false");
+								aprobadoTres = inputAprobado.nextBoolean();
+								break;
+							}else {
+								System.out.println("no hay dato almacenado");
+								break;
+							}
+						case 4:
+							if (nombreCuatro!="") {
+								System.out.println(nombreCuatro);
+								System.out.println("Escriba true si el estudiante fue aprobado, de lo contrario escriba false");
+								aprobadoCuatro = inputAprobado.nextBoolean();
+								break;
+							}else {
+								System.out.println("no hay dato almacenado");
+								break;
+							}
+						case 5: 
+							if (nombreCinco!="") {
+								System.out.println(nombreCinco);
+								System.out.println("Escriba true si el estudiante fue aprobado, de lo contrario escriba false");
+								aprobadoCinco = inputAprobado.nextBoolean();
+								break;
+							}else {
+								System.out.println("no hay dato almacenado");
+								break;
+							}
+						case 6:
+							if (nombreSeis!="") {
+								System.out.println(nombreSeis);
+								System.out.println("Escriba true si el estudiante fue aprobado, de lo contrario escriba false");
+								aprobadoSeis = inputAprobado.nextBoolean();
+								break;
+							}else {
+								System.out.println("no hay dato almacenado");
+								break;
+							}
+						case 7:
+							if (nombreSiete!="") {
+								System.out.println(nombreSiete);
+								System.out.println("Escriba true si el estudiante fue aprobado, de lo contrario escriba false");
+								aprobadoSiete = inputAprobado.nextBoolean();
+								break;
+							}else {
+								System.out.println("no hay dato almacenado");
+								break;
+							}
+						case 8:
+							if (nombreOcho!="") {
+								System.out.println(nombreOcho);
+								System.out.println("Escriba true si el estudiante fue aprobado, de lo contrario escriba false");
+								aprobadoOcho = inputAprobado.nextBoolean();
+								break;
+							}else {
+								System.out.println("no hay dato almacenado");
+								break;
+							}
+							default:break;													
+						}
+						break;
+						
+					}
+				case 3:
+					if (nombreUno != "") {
+						System.out.println("1. "+nombreUno);
+							}							
+						if (nombreDos != "") {
+							System.out.println("2. "+nombreDos);
+								}
+						if (nombreTres != "") {
+							System.out.println("3. "+nombreTres);
+								}
+						if (nombreCuatro != "") {
+							System.out.println("4. "+nombreCuatro);
+								}
+						if (nombreCinco != "") {
+							System.out.println("5. "+nombreCinco);
+								}
+						if (nombreSeis != "") {
+							System.out.println("6. "+nombreSeis);
+								}
+						if (nombreSiete != "") {
+							System.out.println("7. "+nombreSiete);
+								}
+						if (nombreOcho != "") {
+							System.out.println("8. "+nombreOcho);
+								}
+						if (nombreUno=="" && nombreDos=="" && nombreTres=="" && nombreCuatro=="" && nombreCinco=="" && nombreSeis=="" && nombreSiete=="" && nombreOcho=="") {
+							System.out.println("No hay nombres almacenadas");
+							System.out.println("Será devuelto al menú de inicio");
+							break;
+						}
+						if(nombreUno!="" || nombreDos!="" || nombreTres!="" || nombreCuatro!="" || nombreCinco!="" || nombreSeis!="" || nombreSiete!="" || nombreOcho!="") {
+							opcion = input.nextInt();
+							switch(opcion) {
+							
+							case 1:
+								if (nombreUno=="") {
+									break;
+								}
+								if (aprobadoUno=true) {
+									System.out.println(nombreUno);
+									System.out.println("El estudiante fue aprobado, por lo tanto puede continuar con el tramite para la licencia");
+									break;
+								}else {
+									System.out.println(nombreUno);
+									System.out.println("No fue aprobado, deberá repetir el curso");
+									break;
+								}
+								
+							case 2:
+								if (nombreDos=="") {
+									break;}
+								if (aprobadoDos=true) {
+									System.out.println(nombreDos);
+									System.out.println("El estudiante fue aprobado, por lo tanto puede continuar con el tramite para la licencia");
+									break;
+								}else {
+									System.out.println(nombreDos);
+									System.out.println("No fue aprobado, deberá repetir el curso");
+									break;
+								}																
+							case 3:
+								if (nombreTres=="") {
+									break;}
+								if (aprobadoTres=true) {
+									System.out.println(nombreTres);
+									System.out.println("El estudiante fue aprobado, por lo tanto puede continuar con el tramite para la licencia");
+									break;
+								}else {
+									System.out.println(nombreTres);
+									System.out.println("No fue aprobado, deberá repetir el curso");
+									break;
+								}																
+							case 4:
+								if (nombreCuatro=="") {
+									break;}
+								if (aprobadoCuatro=true) {
+									System.out.println(nombreCuatro);
+									System.out.println("El estudiante fue aprobado, por lo tanto puede continuar con el tramite para la licencia");
+									break;
+								}else {
+									System.out.println(nombreCuatro);
+									System.out.println("No fue aprobado, deberá repetir el curso");
+									break;
+								}																
+							case 5:
+								if (nombreCinco=="") {
+									break;}
+								if (aprobadoCinco=true) {
+									System.out.println(nombreCinco);
+									System.out.println("El estudiante fue aprobado, por lo tanto puede continuar con el tramite para la licencia");
+									break;
+								}else {
+									System.out.println(nombreCinco);
+									System.out.println("No fue aprobado, deberá repetir el curso");
+									break;
+								}															
+							case 6:
+								if (nombreSeis=="") {
+									break;}
+								if (aprobadoSeis=true) {
+									System.out.println(nombreSeis);
+									System.out.println("El estudiante fue aprobado, por lo tanto puede continuar con el tramite para la licencia");
+									break;
+								}else {
+									System.out.println(nombreSeis);
+									System.out.println("No fue aprobado, deberá repetir el curso");
+									break;
+								}								
+							case 7:
+								if (nombreSiete=="") {
+									break;}
+								if (aprobadoSiete=true) {
+									System.out.println(nombreSiete);
+									System.out.println("El estudiante fue aprobado, por lo tanto puede continuar con el tramite para la licencia");
+									break;
+								}else {
+									System.out.println(nombreSiete);
+									System.out.println("No fue aprobado, deberá repetir el curso");
+									break;
+								}																
+							case 8:
+								if (nombreOcho=="") {
+									break;}
+								if (aprobadoOcho=true) {
+									System.out.println(nombreOcho);
+									System.out.println("El estudiante fue aprobado, por lo tanto puede continuar con el tramite para la licencia");
+									break;
+								}else {
+									System.out.println(nombreOcho);
+									System.out.println("No fue aprobado, deberá repetir el curso");
+									break;
+								}																
+								default:break;								
+							}
+							break;							
+						}
+										
+				case 4:break;
+									
+				default:
+					break;
+					
+				}								
+			}while(opcion!=4);
+		}while(opcion!=4);		
+	}
+}
+        </code>
+    </pre>
+    <h3>4. Realizar el taller #4 de PSeInt en Java
+    </h3>
+    <h4>Taller Java arreglos 1</h4>
+    <pre>
+        <code>
+            package TallerArreglos;
+import java.util.Scanner;
+public class TallerArreglosUno {
+	public static void main(String[] args) {
+		Scanner input= new Scanner(System.in);
+		String[] datos = new String[5];
+		String[] datoPedido = new String[5];
+		int vector;
+
+		datos[0]="[0]=";
+		datos[1]="[1]=";
+		datos[2]="[2]=";
+		datos[3]="[3]=";
+		datos[4]="[4]=";
+		
+		for(vector=0;vector<=4; vector++) {
+			System.out.println("Escribe un valor para el indice"+vector);
+			datoPedido[vector] = input.nextLine();
+			
+		}
+		for (vector=0;vector<=4; vector++) {
+			System.out.println(datos[vector]+datoPedido[vector]);		
+		}
+	}
+}
+        </code>
+    </pre>
+    <h4>Taller Java arreglos 2</h4>
+    <pre>
+        <code>
+            package TallerArreglos;
+import java.util.Random;
+public class TallerArreglosDos {
+	public static void main(String[] args) {
+		Random aleatorio= new Random();
+		
+		int posicion;
+		int[] vector= new int[20];
+		
+		for(posicion=0;posicion<=19;posicion++) {
+			vector[posicion]=1+aleatorio.nextInt(100);
+		}
+		System.out.print("Escribir numeros pares");
+			for (posicion=0;posicion<=18;posicion++) {
+				if (vector[posicion]%(2)==0) {
+					System.out.print(vector[posicion]+", ");
+				}	
+			}
+			for (posicion=19;posicion<=19;posicion++) {
+				if (vector[posicion]%(2)==0) {
+					System.out.print(vector[posicion]+". ");
+				}	
+			}
+			System.out.println("");
+			System.out.print("numeros impares: ");
+			for (posicion=0;posicion<=18;posicion++) {
+				if (vector[posicion]%(2)==1) {
+					System.out.print(vector[posicion]+", ");
+				}				
+			}
+			for (posicion=19;posicion<=19;posicion++) {
+				if (vector[posicion]%(2)==1) {
+					System.out.print(vector[posicion]+". ");
+				}
+			}
+	}
+}
+        </code>
+    </pre>
+    <h4>Taller Java arreglos 3</h4>
+    <pre>
+        <code>
+            package TallerArreglos;
+public class TallerArreglosTres {
+	public static void main(String[] args) {
+		int num, numPrimo, alcance;
+		for (alcance=1;alcance<=1000;alcance++) {
+			if ((alcance%2!=0) && (alcance%3!=0) && (alcance%5!=0) && (alcance%7!=0) && (alcance%11!=0)) {
+				System.out.println(alcance);
+			}
+			if(alcance==2 || alcance==3 || alcance==5 || alcance==7 || alcance==11) {
+				System.out.println(alcance);
+			}	
+		}
+	}
+}
+        </code>
+    </pre>
+    <h4>Taller Java arreglos 4</h4>
+    <pre>
+        <code>
+            package TallerArreglos;
+public class TallerArreglosCuatro {
+	public static void main(String[] args) {
+		int fila, columna;
+		String[][] matriz= new String[4][5];
+		
+		matriz[0][0] = "01";
+		matriz[0][1] = "02";
+		matriz[0][2] = "03";
+		matriz[0][3] = "04";
+		matriz[0][4] = "05";
+		matriz[1][0] = "10";
+		matriz[1][1] = "09";
+		matriz[1][2] = "08";
+		matriz[1][3] = "07";
+		matriz[1][4] = "06";
+		matriz[2][0] = "11";
+		matriz[2][1] = "12";
+		matriz[2][2] = "13";
+		matriz[2][3] = "14";
+		matriz[2][4] = "15";
+		matriz[3][0] = "20";
+		matriz[3][1] = "19";
+		matriz[3][2] = "18";
+		matriz[3][3] = "17";
+		matriz[3][4] = "16";
+		
+		for (fila=0;fila<=3;fila++) {
+			for (columna=0;columna<=4;columna++) {
+				System.out.print(matriz[fila][columna]+" ");
+			}
+			System.out.println("");
+		}
+	}
+}
+        </code>
+    </pre>
+    <h4>Taller Java arreglos 5</h4>
+    <pre>
+        <code>
+            package TallerArreglos;
+import java.util.Scanner;
+public class TallerArreglosCinco {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int fila, filaDos, columna, columnaDos;
+		String[][] matriz = new String[10][10];
+		int [][] matrizDos= new int[10][10];
+		matriz[0][0] = "1x1";
+		matriz[0][1] = "2x1";
+		matriz[0][2] = "3x1";
+		matriz[0][3] = "4x1";
+		matriz[0][4] = "5x1";
+		matriz[0][5] = "6x1";
+		matriz[0][6] = "7x1";
+		matriz[0][7] = "8x1";
+		matriz[0][8] = "9x1";
+		matriz[0][9] = "10x1";
+		matriz[1][0] = "1x2";
+		matriz[1][1] = "2x2";
+		matriz[1][2] = "3x2";
+		matriz[1][3] = "4x2";
+		matriz[1][4] = "5x2";
+		matriz[1][5] = "6x2";
+		matriz[1][6] = "7x2";
+		matriz[1][7] = "8x2";
+		matriz[1][8] = "9x2";
+		matriz[1][9] = "10x2";
+		matriz[2][0] = "1x3";
+		matriz[2][1] = "2x3";
+		matriz[2][2] = "3x3";
+		matriz[2][3] = "4x3";
+		matriz[2][4] = "5x3";
+		matriz[2][5] = "6x3";
+		matriz[2][6] = "7x3";
+		matriz[2][7] = "8x3";
+		matriz[2][8] = "9x3";
+		matriz[2][9] = "10x3";
+		matriz[3][0] = "1x4";
+		matriz[3][1] = "2x4";
+		matriz[3][2] = "3x4";
+		matriz[3][3] = "4x4";
+		matriz[3][4] = "5x4";
+		matriz[3][5] = "6x4";
+		matriz[3][6] = "7x4";
+		matriz[3][7] = "8x4";
+		matriz[3][8] = "9x4";
+		matriz[3][9] = "10x4";
+		matriz[4][0] = "1x5";
+		matriz[4][1] = "2x5";
+		matriz[4][2] = "3x5";
+		matriz[4][3] = "4x5";
+		matriz[4][4] = "5x5";
+		matriz[4][5] = "6x5";
+		matriz[4][6] = "7x5";
+		matriz[4][7] = "8x5";
+		matriz[4][8] = "9x5";
+		matriz[4][9] = "10x5";
+		matriz[5][0] = "1x6";
+		matriz[5][1] = "2x6";
+		matriz[5][2] = "3x6";
+		matriz[5][3] = "4x6";
+		matriz[5][4] = "5x6";
+		matriz[5][5] = "6x6";
+		matriz[5][6] = "7x6";
+		matriz[5][7] = "8x6";
+		matriz[5][8] = "9x6";
+		matriz[5][9] = "10x6";
+		matriz[6][0] = "1x7";
+		matriz[6][1] = "2x7";
+		matriz[6][2] = "3x7";
+		matriz[6][3] = "4x7";
+		matriz[6][4] = "5x7";
+		matriz[6][5] = "6x7";
+		matriz[6][6] = "7x7";
+		matriz[6][7] = "8x7";
+		matriz[6][8] = "9x7";
+		matriz[6][9] = "10x7";
+		matriz[7][0] = "1x8";
+		matriz[7][1] = "2x8";
+		matriz[7][2] = "3x8";
+		matriz[7][3] = "4x8";
+		matriz[7][4] = "5x8";
+		matriz[7][5] = "6x8";
+		matriz[7][6] = "7x8";
+		matriz[7][7] = "8x8";
+		matriz[7][8] = "9x8";
+		matriz[7][9] = "10x8";
+		matriz[8][0] = "1x9";
+		matriz[8][1] = "2x9";
+		matriz[8][2] = "3x9";
+		matriz[8][3] = "4x9";
+		matriz[8][4] = "5x9";
+		matriz[8][5] = "6x9";
+		matriz[8][6] = "7x9";
+		matriz[8][7] = "8x9";
+		matriz[8][8] = "9x9";
+		matriz[8][9] = "10x9";
+		matriz[9][0] = "1x10";
+		matriz[9][1] = "2x10";
+		matriz[9][2] = "3x10";
+		matriz[9][3] = "4x10";
+		matriz[9][4] = "5x10";
+		matriz[9][5] = "6x10";
+		matriz[9][6] = "7x10";
+		matriz[9][7] = "8x10";
+		matriz[9][8] = "9x10";
+		matriz[9][9] = "10x10";
+		
+		for (fila=0;fila<=8;fila++) {
+			for (columna=0;columna<=9;columna++) {
+				System.out.print(matriz[fila][columna]+"   ");
+			}
+			System.out.println("");
+		}
+		for (fila=9;fila<=9;fila++) {
+			for (columna=0;columna<=9;columna++) {
+				System.out.print(matriz[fila][columna]+"  ");
+			}
+			System.out.println("");
+		}
+		for (filaDos=0;filaDos<=9;filaDos++) {
+			for (columnaDos=0;columnaDos<=9;columnaDos++) {
+				matrizDos[filaDos][columnaDos] = (filaDos+1)*(columnaDos+1);
+			}
+		}
+		System.out.println("Escriba la fila del valor que desea hallar (TENGA EN CUENTA QUE LA FILA INICIA DESDE LA INSTANCIA (0)");
+		filaDos = input.nextInt();
+		System.out.println("Escriba la columna del valor que desea hallar (TENGA EN CUENTA QUE LA FILA INICIA DESDE LA INSTANCIA (0)");
+		columnaDos = input.nextInt();
+		System.out.println(matrizDos[filaDos][columnaDos]);
+	}
+}
+        </code>
+    </pre>
+
+</body>
+
+</html>

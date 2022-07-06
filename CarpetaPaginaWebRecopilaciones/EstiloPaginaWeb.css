@@ -1,0 +1,20 @@
+body{
+        width: 1024px;
+        margin: 0px auto;
+        color: black;
+        background-color: #8b97c2;
+        
+}
+#encabezadoPortafolio{  
+        margin: auto;
+        display: Block;
+        color: #171a88;
+    }
+    #encabezadoPortafolio h1{
+        width: 400px;
+        margin: auto;
+    }
+    #encabezadoPortafolio h2{
+        width: 1024px;
+        margin: auto;
+    }

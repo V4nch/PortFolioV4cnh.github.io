@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller Final</title>
+    <link rel="stylesheet" href="PaginaWeb.css" type="text/css" />
+    <script src="PaginaWeb.js"></script>
+</head>
+<body id="bodyFrutas" class="bodyFrutas">
+    <header> 
+        <div id="headerFrutas" class="headerFrutas">
+            <hgroup>
+                <h1><a>Frutas del Taller Final</a></h1>                                                                                  
+                <h2 class="descripcion">
+                   Selecciona entre el tema par o el tema impar a tu gusto.
+                </h2>
+            </hgroup>
+        </div>
+        <aside>
+            ><select  onchange="ejecutar()" name="temasFrutas" id="temasFrutas">
+                <option id="OptionTema" value="1" > Original </option>
+                <option id="OptionTema" value="2" > Tema PAR </option>
+                <option id="OptionTema" value="3" > Tema IMPAR </option>
+
+            </select>
+        </aside>
+
+    </header>
+    <ol  class="frutas" id="Lista">
+        <li class="imPar" id="frutas" >Pera</li>
+        <li class="par" id="frutas" >Maracuya</li>
+        <li class="imPar" id="frutas" >Banano</li>
+        <li class="par" id="frutas" >Guayaba</li>
+        <li class="imPar" id="frutas" >Tamarindo</li>
+        <li class="par" id="frutas" >Lulo</li>
+        <li class="imPar" id="frutas" >Fresa</li>
+        <li class="par" id="frutas" >Guanabana</li>
+        <li class="imPar" id="frutas" >Mango</li>
+        <li class="par" id="frutas" >Curuba</li>
+      </ol>
+</body>
+</html>

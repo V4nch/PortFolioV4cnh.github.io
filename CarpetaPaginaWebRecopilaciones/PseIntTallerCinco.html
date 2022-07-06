@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller PseIntCinco </title>
+    <link rel="stylesheet" href="EstiloPaginaWeb.css" type="text/css" />
+</head>
+<body>
+    <header><h1> Taller Funciones PseInt</h1>
+		<div id="Vuelta al portafolio" >
+			<p><a href="/TallerFinal/CarpetaPaginaWebRecopilaciones/PortafolioWeb.html">Portafolio Web</a></p>
+		  </div>
+	</header>
+    <h3>1. Organizar todos los puntos del taller de condicionales en modo funciones.
+    </h3>
+    <h4>Funciones y condicionales 1</h4>
+    <pre>
+        <code>
+SubProceso clasificarEdad(edad)
+	Si edad >= 18 Entonces;
+		Escribir "Usted es mayor de Edad";
+	FinSi
+	
+FinSubProceso
+Proceso TallerCondicionalesYFuncionesUno
+	Definir edad Como Entero;
+
+	Escribir "Escriba aquí su edad";
+	Leer edad;
+	clasificarEdad(edad);
+	
+FinProceso
+        </code>
+    </pre>
+    <h4>Funciones y condicionales 2</h4>
+    <pre><code>
+SubProceso clasificarEdad(edad)
+	si edad < 18 Entonces
+		Escribir "Usted aún es un niño";
+	FinSi
+	
+FinSubProceso
+Proceso TallerCondicionalesYFuncionesDos
+	Definir edad Como Entero;
+	
+	Escribir "Escriba aquí su edad";
+	Leer edad;
+	clasificarEdad(edad);
+	
+	
+FinProceso
+    </code></pre>
+    <h4>Funciones y condicionales 3</h4>
+    <pre>
+        <code>
+            
+SubProceso clasificarEdad(edad, nombre)
+Si edad >= 18 Entonces;
+    Escribir nombre, ", usted es mayor de edad, por lo tanto puede entrar a la fiesta";
+FinSi
+si edad < 18 Entonces
+    Escribir nombre, ", usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.";
+FinSi
+FinSubProceso
+
+Proceso TallerCondicionalesYFuncionesTres
+Definir edad Como Entero;
+Definir nombre Como Caracter;
+
+Escribir "¿Cual es su Nombre completo?";
+Leer nombre;
+Escribir "¿Cual es su Edad?";
+Leer edad;
+clasificarEdad(edad, nombre);
+
+FinProceso
+        </code>
+    </pre>
+    <h4>Funciones y condicionales 4</h4>
+    <pre>
+        <code>
+SubProceso resultado<-elegirOpcion()
+	
+Definir Opcion Como Entero;
+Definir resultado Como Entero;
+
+	Escribir "Elija una Opcion";
+	Escribir "1. Alquilar una Pelicula";
+	Escribir "2. Consultar Peliculas disponibles";
+	Escribir "3, Recibir Pelicula en la videotienda";
+	Escribir "4, Peticion, Queja, reclamo o novedad";
+	Leer Opcion;
+	resultado<-Opcion;
+FinSubProceso
+
+Proceso TallerCondicionalesYFuncionesCuatro
+	Definir Opcion Como Entero;
+	definir PeliculaCapturada Como Logico;
+	definir Pelicula, Novedad Como Caracter;
+	PeliculaCapturada<-falso;
+	opcion<-elegirOpcion();
+	Segun Opcion Hacer
+		1:
+			Escribir "Disfruta tu pelicula";
+		2:
+			SI PeliculaCapturada = Verdadero Entonces;
+				Escribir "Pelicula Disponible";
+			SiNo
+				Escribir "¿Que pelicula quieres consultar?";
+				Leer Pelicula;
+				
+			FinSi
+		
+		3:
+			Escribir "Puede acercarse a nuestra sucursal";
+		4:
+			Escribir "¿Cual es su novedad?";
+			Leer Novedad;
+		De Otro Modo:
+			Escribir "La opcion elegida no es valida";
+			
+	FinSegun
+
+FinProceso
+        </code>
+    </pre>
+    <h4>Funciones y condicionales 5</h4>
+    <pre>
+        <code>
+            SubProceso resultado<-elegirOpcion()
+
+	Definir Opcion Como Entero;
+	Definir resultado Como Entero;
+	
+	Escribir "elija una opcion";
+	Escribir "1. Adquirir un producto";
+	Escribir "2. Devolucion Producto";
+	Escribir "3. Salir del sistema";
+	Leer Opcion;
+	resultado<-Opcion;
+FinSubProceso
+SubProceso resultadoDos<-Precio()
+	definir resultadoDos Como Real;
+	resultadoDos<- 10000;
+FinSubProceso
+
+Proceso TallerCondicionalesYFuncionesCinco
+	Definir Opcion Como Entero;
+	Definir Producto Como Caracter;
+	
+	opcion<-elegirOpcion();
+	Segun Opcion Hacer
+		1:
+			Escribir "¿Que producton desea adquirir?";
+			Leer Producto;
+			Escribir " Este producto cuesta ", precio();
+		2:
+			Escribir "Lamentamos las molestias";
+		3:
+			Escribir "Vuelva Pronto";
+	
+	FinSegun
+FinProceso
+        </code>
+    </pre>
+    <h4>Funciones y condicionales 6</h4>
+    <pre>
+        <code>
+SubProceso resultado<-elegirOpcion()
+	Definir Opcion Como Entero;
+	Definir resultado Como Entero;
+
+	Escribir "Motos El Maquinista, Elija una opcion";
+	Escribir "1. Placa para ingreso";
+	Escribir "2. Placa para salida";
+	Escribir "3. Respuestos utilizados";
+	Leer Opcion;
+	resultado<-Opcion;
+FinSubProceso
+Proceso TallerCondicionalesYFuncionesSeis
+	Definir Placa, Novedad, Repuestos Como Caracter;
+	Definir opcion como entero;
+	opcion<-elegirOpcion();
+	Segun Opcion Hacer
+		1:
+			Escribir "Escriba placa";
+			Leer placa;
+			Escribir "Escriba novedad";
+			Leer Novedad;
+			Limpiar Pantalla;
+			Escribir Placa," Observaciones por parte del cliente:  ", Novedad;
+		2:
+			Escribir "Escriba placa";
+			Leer Placa;
+			Escribir "Escriba reparaciones realizadas y repuestos cambiados";
+			Leer Novedad;
+			Limpiar Pantalla;
+			Escribir "la moto de placa:  ", placa, " se le realizaron las siguientes modificaciones:  ", Novedad;
+		3:
+			Escribir "placa";
+			Leer PLaca;
+			Escribir " ¿Que respuestos utilizó?";
+			Leer repuestos;
+			Limpiar Pantalla;
+			Escribir "Los siguientes Repuestos fueron utlizados ", repuestos;
+	
+	FinSegun
+FinProceso
+        </code>
+    </pre>
+    <h4>Funciones y condicionales 7</h4>
+    <pre>
+        <code>
+SubProceso imc<-datos(peso, estatura)
+	Definir imc Como real;
+	imc <- peso/(estatura^2);
+FinSubProceso
+SubProceso clasificacion(imc)
+	Si Imc < 18.5 Entonces
+		Limpiar Pantalla;
+		Escribir "Su imc es de ",imc,  " por lo tanto Usted está debajo del peso normal.";
+	FinSi
+	Si 18.5 <= imc y imc < 25 Entonces
+		Limpiar Pantalla;
+		Escribir "Su imc es de ",imc,  " por lo tanto usted en el peso normal.";
+	FinSi
+	si 25 <= imc y imc < 30 Entonces
+		Limpiar Pantalla;
+		Escribir "Su imc es de ",imc,  " por lo tanto usted está en sobrepeso.";
+		
+	FinSi
+	Si 30<= imc Entonces
+		Limpiar Pantalla;
+		escribir "Su imc es de ",imc,  " por lo tanto usted está obeso.";
+		
+	FinSi
+FinSubProceso
+
+Proceso TallerCondicionalesYFuncionesSiete
+	Definir peso Como Real;
+	Definir estatura Como Real;
+	Escribir "Digite aquí su peso en Kilogramos";
+	Leer peso;
+	Escribir "Digite aquí su estatura en Metros";
+	Leer estatura;
+	//se aprovecha el retorno para evitar una nueva definicion de una variable.(para ahorrar lineas de codigo.
+clasificacion(datos(peso, estatura));
+
+FinProceso
+        </code>
+    </pre>
+    <h4>Funciones y condicionales 8</h4>
+    <pre>
+        <code>
+SubProceso resultado<-elegirOpcion()
+	Definir Opcion Como Entero;
+	Definir resultado Como Entero;	
+	Escribir "Bienvenidos a tortas Don Carlos ¿En que podemos ayudarlo?";
+	Escribir "1. Tomar pedido";
+	escribir "2. Tortas Disponibles";
+	Escribir "3. VentasDiarias";
+	Leer Opcion;
+	resultado<-Opcion;
+FinSubProceso
+
+Proceso TallerCondicionalesYFuncionesOcho
+	Definir Sabor, decoraciones Como Caracter;
+	definir cantidad, TortasDisponibles, VentasDiarias, opcion Como Entero;
+	Opcion<-elegirOpcion();
+	Segun Opcion hacer
+		1:
+			Escribir "¿Que sabor desea llevar?";
+			Leer Sabor;
+			Escribir "¿De cuantas porciones la necesita?";
+			Leer Cantidad;
+			Escribir "¿Que decoracion desea?";
+			Leer decoraciones;
+			Limpiar Pantalla;
+			Escribir "Su orden saldrá en un momento";
+			
+		2: 
+			Escribir "Tenemos disponibilidad en todas nuestras tortas";
+			
+		3:
+			Escribir " Registre el numero de ventas del día de hoy";
+			Leer VentasDiarias;
+			Limpiar Pantalla;
+			Escribir "se han añadido ", VentasDiarias, " nuevas ventas en el dia de hoy";
+			
+	FinSegun
+	
+FinProceso
+        </code>
+    </pre>
+    <h4>Funciones y condicionales 9</h4>
+    <pre>
+        <code>
+SubProceso resultado<-elegirOpcion()
+	Definir Opcion Como Entero;
+	Definir resultado Como Entero;
+	Escribir "¿Que poligono desea calcular?";
+	Escribir "1. Triangulo";
+	Escribir "2. Rectangulo";
+	Escribir "3. Traprecio";
+	Leer Opcion;
+	resultado<-Opcion;
+FinSubProceso
+SubProceso triangulo(base, altura)
+	Definir areaTriangulo Como Real;
+	areaTriangulo<- (base*altura)/2;
+	Escribir "el area del triangulo es: ", areaTriangulo;
+FinSubProceso
+SubProceso cuadrado(base, altura)
+	Definir areaCuadrado Como Real;
+	areaCuadrado<- (base*altura);
+	Escribir "el area del cuadrado es: ", areaCuadrado;
+FinSubProceso
+SubProceso Trapecio(base, altura)
+	Definir areaTrapecio Como Real;
+	areaTrapecio<- ((basemayor+basemenor)/2)*altura; 
+	Escribir "el area del trapecio es: ", areaTrapecio;
+FinSubProceso
+Proceso TallerCondicionalesYFuncionesNueve
+	Definir altura, base Como Real;
+	Definir Opcion Como Entero;
+	Opcion<-elegirOpcion();
+	Segun Opcion Hacer
+		1:
+			Escribir "Digite altura";
+			leer altura;
+			Escribir "Digite base";
+			Leer base;
+			triangulo(base, altura);
+		2: 
+			Escribir "Digite altura";
+			leer altura;
+			Escribir "Digite base";
+			Leer base;
+			cuadrado(base, altura);
+		3:
+			Escribir "Digite altura";
+			leer altura;
+			Escribir "Digite base";
+			Leer base;
+			Trapecio(base, altura);
+			
+	FinSegun
+	
+FinProceso
+        </code>
+    </pre>
+    <h4>Funciones y condicionales 10</h4>
+    <pre>
+        <code>
+SubProceso resultado<-elegirOpcion()
+	Definir titular Como Caracter;
+	Escribir "Favor poner nombre titular";
+	Leer titular;
+	Limpiar Pantalla;
+	Definir Opcion Como Entero;
+	Definir resultado Como Entero;
+	Escribir "Hola ", titular, " ¿que deseas hacer hoy?";
+	Escribir "1. Ingresar Dinero";
+	Escribir "2. Retirar Dinero";
+	Escribir "3. Consultar Saldo";
+	Leer Opcion;
+	resultado<-Opcion;
+FinSubProceso
+SubProceso resultadoDos<-Saldo()
+	definir resultadoDos Como Real;
+	resultadoDos<- 100000;
+FinSubProceso
+
+Proceso TallerCondicionalesYFuncionesDiez
+	Definir opcion Como Entero;
+	Definir ingreso, retiro Como Real;
+	opcion<-elegirOpcion();
+	
+	Segun opcion hacer
+		1:
+			Escribir "Ingrese monto que va a consignar";
+			Leer ingreso;
+			Limpiar Pantalla;
+			Escribir "Su Saldo despues de la consigna es: ", saldo()+ingreso;
+		2:
+			Escribir "Ingrese monto que desea retirar";
+			Leer retiro;
+			Limpiar Pantalla;
+			Si Saldo < retiro Entonces;
+				Escribir "No tiene saldo suficiente para el retiro";
+			SiNo
+				Escribir "Su saldo después del retiro es: ", saldo()-retiro;
+				
+			FinSi
+		3:
+			Limpiar Pantalla;
+			Escribir "Su saldo actual es de: ", Saldo();
+			
+	FinSegun
+FinProceso
+        </code>
+    </pre>
+    <h3>2. Organizar los puntos 6, 7 y 8 del taller de ciclos en modo funciones.
+    </h3>
+    <h4>Funciones y ciclos 6</h4>
+    <pre>
+        <code>
+SubProceso resultado<-elegirOpcion()
+	Definir Opcion Como Entero;
+	Definir resultado Como Entero;
+	Escribir "Seleccione una opcion";
+	Escribir "1. Añadir contactos";
+	Escribir "2. Buscar contacto";
+	Escribir "3. eliminar un contaco";
+	Escribir "4. Salir";
+	Leer Opcion;
+	resultado<-Opcion;
+FinSubProceso
+
+Proceso TallerCiclosYFuncionesSeis
+	
+	Definir nombreUno, nombreDos, nombreTres Como Caracter;
+	Definir organizacionUno, organizacionDos, organizacionTres Como Caracter;
+	Definir telefonoUno, telefonoDos, telefonoTres Como Entero;
+	Definir opcion, nombreABuscar Como Entero; 
+	Definir salirSistema, salirSistemaDefinitivo Como Logico;
+	
+	salirSistema<-verdadero;
+	salirSistemaDefinitivo<-Verdadero;
+	nombreUno<-"";
+	nombreDos<-"";
+	nombreTres<-"";
+	
+	Repetir
+		Repetir
+		opcion<-elegirOpcion;
+			segun opcion Hacer
+				1: Si nombreUno = "" y salirSistema=Verdadero Entonces
+						Escribir "Escriba el nombre del contacto que desea añadir";
+						Leer nombreUno;
+						Escribir "escriba numero telefonico del contacto";
+						Leer telefonoUno;
+						Escribir "Escriba la organizacion a la que pertenece";
+						Leer organizacionUno;
+						salirSistema<-falso;
+					FinSi
+					Si nombreDos = "" y salirSistema=Verdadero  Entonces
+						Escribir "Escriba el nombre del contacto que desea añadir";
+						Leer nombreDos;
+						Escribir "escriba numero telefonico del contacto";
+						Leer telefonoDos;
+						Escribir "Escriba la organizacion a la que pertenece";
+						Leer organizacionDos;
+						salirSistema<-Falso;
+					FinSi
+					Si nombreTres = "" y salirSistema=Verdadero  Entonces
+						Escribir "Escriba el nombre del contacto que desea añadir";
+						Leer nombreTres;
+						Escribir "escriba numero telefonico del contacto";
+						Leer telefonoTres;
+						Escribir "Escriba la organizacion a la que pertenece";
+						Leer organizacionTres;
+						salirSistema<-Falso;
+						
+					FinSi
+					
+				2: 
+					si nombreUno <> "" Entonces
+						Escribir "1. ", nombreUno;
+					FinSi
+					
+					si nombreDos <> "" Entonces
+						Escribir "2. ", nombreDos;
+						
+					FinSi
+					si nombreTres <> "" Entonces
+						Escribir "3. ", nombreTres;
+						
+					FinSi
+					si nombreUno="" y nombreDos="" y nombreTres="" Entonces
+						Escribir "No hay numeros almacenados";
+						Escribir "Será devuelto al menú de inicio";
+						salirSistema<-falso;
+					FinSi
+					si nombreUno<>"" o nombreDos<>"" o nombreTres<>"" Entonces
+						Leer nombreABuscar;
+						Segun nombreABuscar hacer
+							
+							1: si nombreUno<>"" Entonces
+									escribir "Nombre: ", nombreUno;
+									escribir telefonoUno;
+									Escribir organizacionUno;
+								SiNo
+									Escribir "No hay dato almacenado, será devuelto al inicio";
+									salirSistema<-falso;
+								FinSi
+							2:si nombreDos<>"" Entonces
+								escribir "Nombre: ", nombreDos;
+								escribir telefonoDos;
+								Escribir organizacionDos;
+							SiNo
+								Escribir "No hay dato almacenado, será devuelto al inicio";
+								salirSistema<-falso;
+							FinSi
+						3:si nombreTres<>"" Entonces
+							escribir "Nombre: ", nombreTres;
+							escribir telefonoTres;
+							Escribir organizacionTres;
+						SiNo
+							Escribir "No hay dato almacenado, será devuelto al inicio";
+							salirSistema<-falso;
+						FinSi
+					De Otro Modo:
+						Escribir "Opcion invalida, será devuelto al inicio";
+						salirSistema<-falso;
+				FinSegun	
+			FinSi
+		
+		3:	
+			si nombreUno <> "" Entonces
+				Escribir "1. ", nombreUno;
+			FinSi
+			
+			si nombreDos <> "" Entonces
+				Escribir "2. ", nombreDos;
+				
+			FinSi
+			si nombreTres <> "" Entonces
+				Escribir "3. ", nombreTres;
+				
+			FinSi
+			si nombreUno="" y nombreDos="" y nombreTres="" Entonces
+				Escribir "No hay numeros almacenados";
+				Escribir "Será devuelto al menú de inicio";
+				salirSistema<-falso;
+			FinSi
+			si nombreUno<>"" o nombreDos<>"" o nombreTres<>"" Entonces
+				Leer nombreABuscar;
+				Segun nombreABuscar hacer
+					1: nombreUno<-"";
+						telefonoUno<-0;
+						organizacionUno<-"";
+						
+					2: nombreDos<-"";
+						telefonoDos<-0;
+						organizacionDos<-"";
+					3: nombreTres<-"";
+						telefonoTres<-0;
+						organizacionTres<-"";
+					De Otro Modo:
+						Escribir "Opcion invalida, será devuelto al inicio";
+						salirSistema<-falso;
+				FinSegun
+			FinSi
+		4: salirSistema<-falso;
+			salirSistemaDefinitivo<-falso;	
+		De Otro Modo:
+			Escribir "Opcion invalida";
+			salirSistema<-falso;	
+	FinSegun
+Hasta Que salirSistema=falso;
+salirSistema<-Verdadero;
+
+Hasta Que salirSistemaDefinitivo=falso;
+
+FinProceso
+        </code>
+    </pre>
+    <h4>Funciones y ciclos 7</h4>
+    <pre>
+        <code>
+SubProceso resultado<-elegirOpcion()
+	Definir Opcion Como Entero;
+	Definir resultado Como Entero;
+	Escribir "Seleccione una opcion";
+	Escribir "1. Registrar placa para ingresar al parqueadero";
+	Escribir "2. Buscar placa";
+	Escribir "3. Retirar placa que saldrá del parqueadero";
+	Escribir "4. Salir";
+	Leer Opcion;
+	resultado<-Opcion;
+FinSubProceso
+Proceso TallerCiclosYFuncionesSiete
+	Definir placaUno, placaDos, placaTres, placaCuatro, placaCinco Como Caracter;
+	Definir marcaUno, marcaDos, marcaTres, marcaCuatro, marcaCinco Como Caracter;
+	Definir nombreUno, nombreDos, nombreTres, nombreCuatro, nombreCinco Como Caracter;
+	Definir telefonoUno, telefonoDos, telefonoTres, telefonoCuatro, telefonoCinco Como Entero;
+	Definir opcion, placaABuscar Como Entero; 
+	Definir salirSistema, salirSistemaDefinitivo Como Logico;
+	
+	salirSistema<-verdadero;
+	salirSistemaDefinitivo<-Verdadero;
+	placaUno<-"";
+	placaDos<-"";
+	placaTres<-"";
+	placaCuatro<-"";
+	placaCinco<-"";
+	
+	Repetir
+		Repetir
+			opcion<-elegirOpcion;
+			segun opcion Hacer
+				1: Si placaUno = "" y salirSistema=Verdadero Entonces
+						Escribir "Escriba la placa que desea registrar";
+						Leer placaUno;
+						Escribir "Escriba marca del vehículo";
+						leer marcaUno;
+						Escribir "escriba numero telefonico de contacto";
+						Leer telefonoUno;
+						Escribir "Escriba el nombre de la persona que pertenece";
+						Leer nombreUno;
+						salirSistema<-falso;
+					FinSi
+					Si placaDos = "" y salirSistema=Verdadero  Entonces
+						Escribir "Escriba la placa que desea registrar";
+						Leer placaDos;
+						Escribir "Escriba marca del vehículo";
+						leer marcaDos;
+						Escribir "Escriba numero telefonico de contacto";
+						Leer telefonoDos;
+						Escribir "Escriba el nombre de la persona que pertenece";
+						Leer nombreDos;
+						salirSistema<-Falso;
+					FinSi
+					Si placaTres = "" y salirSistema=Verdadero  Entonces
+						Escribir "Escriba la placa que desea registrar";
+						Leer placaTres;
+						Escribir "Escriba marca del vehículo";
+						leer marcaTres;
+						Escribir "escriba numero telefonico del contacto";
+						Leer telefonoTres;
+						Escribir "Escriba el nombre de la persona que pertenece";
+						Leer nombreTres;
+						salirSistema<-Falso;
+						
+					FinSi
+					Si placaCuatro = "" y salirSistema=Verdadero  Entonces
+						Escribir "Escriba la placa que desea registrarr";
+						Leer placaCuatro;
+						Escribir "Escriba marca del vehículo";
+						leer marcaCuatro;
+						Escribir "escriba numero telefonico del contacto";
+						Leer telefonoCuatro;
+						Escribir "Escriba el nombre de la persona que pertenece";
+						Leer nombreCuatro;
+						salirSistema<-Falso;
+						
+					FinSi
+					Si placaCinco = "" y salirSistema=Verdadero  Entonces
+						Escribir "Escriba la placa que desea registrar";
+						Leer placaCinco;
+						Escribir "Escriba marca del vehículo";
+						leer marcaCinco;
+						Escribir "escriba numero telefonico del contacto";
+						Leer telefonoCinco;
+						Escribir "Escriba el nombre de la persona que pertenece";
+						Leer nombreCinco;
+						salirSistema<-Falso;
+						
+					FinSi
+					
+				2: 
+					si placaUno <> "" Entonces
+						Escribir "1. ", placaUno;
+					FinSi
+					
+					si placaDos <> "" Entonces
+						Escribir "2. ", placaDos;
+						
+					FinSi
+					si placaTres <> "" Entonces
+						Escribir "3. ", placaTres;
+						
+					FinSi
+					si placaCuatro <> "" Entonces
+						Escribir "4. ", placaCuatro;
+						
+					FinSi
+					si placaCinco <> "" Entonces
+						Escribir "5. ", placaCinco;
+						
+					FinSi
+					si placaUno="" y placaDos="" y placaTres="" y placaCuatro="" y placaCinco="" Entonces
+						Escribir "No hay placas almacenadas";
+						Escribir "Será devuelto al menú de inicio";
+						salirSistema<-falso;
+					FinSi
+					si placaUno<>"" o placaDos<>"" o placaTres<>"" o placaCuatro<>"" o placaCinco<>"" Entonces
+						Leer placaABuscar;
+						Segun placaABuscar hacer
+							
+							1: si placaUno<>"" Entonces
+									escribir "Placa: ", placaUno;
+									Escribir "Marca; ", marcaUno;
+									escribir "telefono: " , telefonoUno;
+									Escribir "nombre: ", nombreUno;
+								SiNo
+									Escribir "No hay dato almacenado, será devuelto al inicio";
+									salirSistema<-falso;
+								FinSi
+							2:si placaDos<>"" Entonces
+								escribir "Placa: ", placaDos;
+								Escribir "Marca; ", marcaDos;
+								escribir "telefono: " , telefonoDos;
+								Escribir "nombre: ", nombreDos;
+							SiNo
+								Escribir "No hay dato almacenado, será devuelto al inicio";
+								salirSistema<-falso;
+							FinSi
+						3:si placaTres<>"" Entonces
+							escribir "Placa: ", placaTres;
+							Escribir "Marca; ", marcaTres;
+							escribir "telefono: " , telefonoTres;
+							Escribir "nombre: ", nombreTres;
+							
+						SiNo
+							Escribir "No hay dato almacenado, será devuelto al inicio";
+							salirSistema<-falso;
+						FinSi
+					4: si placaCuatro<>"" Entonces
+							escribir "Placa: ", placaCuatro;
+							Escribir "Marca; ", marcaCuatro;
+							escribir "telefono: " , telefonoCuatro;
+							Escribir "nombre: ", nombreCuatro;
+							
+						SiNo
+							Escribir "No hay dato almacenado, será devuelto al inicio";
+							salirSistema<-falso;
+						FinSi
+					5: 	si placaCinco<>"" Entonces
+							escribir "Placa: ", placaCinco;
+							Escribir "Marca; ", marcaCinco;
+							escribir "telefono: " , telefonoCinco;
+							Escribir "nombre: ", nombreCinco;
+							
+						SiNo
+							Escribir "No hay dato almacenado, será devuelto al inicio";
+							salirSistema<-falso;
+						FinSi
+					De Otro Modo:
+						Escribir "Opcion invalida, será devuelto al inicio";
+						salirSistema<-falso;
+				FinSegun	
+			FinSi
+			
+			
+		3:
+			
+			si placaUno <> "" Entonces
+				Escribir "1. ", placaUno;
+			FinSi
+			
+			si placaDos <> "" Entonces
+				Escribir "2. ", placaDos;
+				
+			FinSi
+			si placaTres <> "" Entonces
+				Escribir "3. ", placaTres;
+				
+			FinSi
+			si placaCuatro <> "" Entonces
+				Escribir "4. ", placaCuatro;
+				
+			FinSi
+			si placaCinco <> "" Entonces
+				Escribir "5. ", placaCinco;
+				
+			FinSi
+			si placaUno="" y placaDos="" y placaTres="" y placaCuatro="" y placaCinco="" Entonces
+				Escribir "No hay placas almacenadas";
+				Escribir "Será devuelto al menú de inicio";
+				salirSistema<-falso;
+			FinSi
+			si placaUno<>"" o placaDos<>"" o placaTres<>"" o placaCuatro<>"" o placaCinco<>"" Entonces
+				Leer placaABuscar;
+				Segun placaABuscar hacer
+					1: placaUno<-"";
+						marcaUno<-"";
+						telefonoUno<-0;
+						nombreUno<-"";
+						
+					2: placaDos<-"";
+						marcaDos<-"";
+						telefonoDos<-0;
+						nombreDos<-"";
+					3: placaTres<-"";
+						marcaTres<-"";
+						telefonoTres<-0;
+						nombreTres<-"";
+					4:placaCuatro<-"";
+						marcaCuatro<-"";
+						telefonoCuatro<-0;
+						nombreCuatro<-"";
+						
+					5:placaCinco<-"";
+						marcaCinco<-"";
+						telefonoCinco<-0;
+						nombreCinco<-"";
+						
+					De Otro Modo:
+						Escribir "Opcion invalida, será devuelto al inicio";
+						salirSistema<-falso;
+				FinSegun
+			FinSi
+		4: salirSistema<-falso;
+			salirSistemaDefinitivo<-falso;	
+		De Otro Modo:
+			Escribir "Opcion invalida";
+			salirSistema<-falso;	
+	FinSegun
+Hasta Que salirSistema=falso;
+salirSistema<-Verdadero;
+
+Hasta Que salirSistemaDefinitivo=falso;
+
+FinProceso
+        </code>
+    </pre>
+    <h4>Funciones y ciclos 8</h4>
+    <pre>
+        <code>
+SubProceso resultado<-elegirOpcion()
+	Definir Opcion Como Entero;
+	Definir resultado Como Entero;
+	Escribir "Seleccione una opcion";
+	Escribir "1. Registrar ingreso de Estudiante";
+	Escribir "2. Dar calificacion";
+	Escribir "3. Buscar si aprobó o no";
+	Escribir "4. Salir";
+	Leer opcion;
+	resultado<-Opcion;
+FinSubProceso
+Proceso TallerCiclosYFuncionesOcho
+	
+	Definir nombreUno, nombreDos, nombreTres, nombreCuatro, nombreCinco, nombreSeis, nombreSiete, nombreOcho Como Caracter;
+	Definir aprobadoUno, aprobadoDos, aprobadoTres, aprobadoCuatro, aprobadoCinco, aprobadoSeis, aprobadoSiete, aprobadoOcho Como Logico;
+	Definir opcion, nombreABuscar Como Entero; 
+	Definir salirSistema, salirSistemaDefinitivo Como Logico;
+	
+	salirSistema<-verdadero;
+	salirSistemaDefinitivo<-Verdadero;
+	nombreUno<-"";
+	nombreDos<-"";
+	nombreTres<-"";
+	nombreCuatro<-"";
+	nombreCinco<-"";
+	nombreSeis<-"";
+	nombreSiete<-"";
+	nombreOcho<-"";
+	
+	Repetir
+		Repetir
+			
+			opcion<-elegirOpcion;
+			segun opcion Hacer
+				1: Si nombreUno = "" y salirSistema=Verdadero Entonces
+						Escribir "Escriba el nombre que desea registrar";
+						Leer nombreUno;
+						
+						salirSistema<-falso;
+					FinSi
+					Si nombreDos = "" y salirSistema=Verdadero  Entonces
+						Escribir "Escriba el nombre que desea registrar";
+						Leer nombreDos;
+						salirSistema<-Falso;
+					FinSi
+					Si nombreTres = "" y salirSistema=Verdadero  Entonces
+						Escribir "Escriba el nombre de contacto que desea registrar";
+						Leer nombreTres;
+						salirSistema<-Falso;
+						
+					FinSi
+					Si nombreCuatro = "" y salirSistema=Verdadero  Entonces
+						Escribir "Escriba el nombre que desea registrar";
+						Leer nombreCuatro;
+						salirSistema<-Falso;
+						
+					FinSi
+					Si nombreCinco = "" y salirSistema=Verdadero  Entonces
+						Escribir "Escriba el nombre que desea registrar";
+						Leer nombreCinco;
+						salirSistema<-Falso;
+						
+					FinSi
+					Si nombreSeis = "" y salirSistema=Verdadero  Entonces
+						Escribir "Escriba el nombre que desea registrar";
+						Leer nombreSeis;
+						salirSistema<-Falso;
+						
+					FinSi
+					Si nombreSiete = "" y salirSistema=Verdadero  Entonces
+						Escribir "Escriba el nombre que desea registrar";
+						Leer nombreSiete;
+						salirSistema<-Falso;
+						
+					FinSi
+					Si nombreOcho = "" y salirSistema=Verdadero  Entonces
+						Escribir "Escriba el nombre que desea registrar";
+						Leer nombreOcho;
+						salirSistema<-Falso;
+						
+					FinSi
+					
+				2: 
+					si nombreUno <> "" Entonces
+						Escribir "1. ", nombreUno;
+					FinSi
+					
+					si nombreDos <> "" Entonces
+						Escribir "2. ", nombreDos;
+						
+					FinSi
+					si nombreTres <> "" Entonces
+						Escribir "3. ", nombreTres;
+						
+					FinSi
+					si nombreCuatro <> "" Entonces
+						Escribir "4. ", nombreCuatro;
+						
+					FinSi
+					si nombreCinco <> "" Entonces
+						Escribir "5. ", nombreCinco;
+						
+					FinSi
+					si nombreSeis <> "" Entonces
+						Escribir "6. ", nombreSeis;
+						
+					FinSi
+					si nombreSiete <> "" Entonces
+						Escribir "7. ", nombreSiete;
+						
+					FinSi
+					si nombreOcho <> "" Entonces
+						Escribir "8. ", nombreOcho;
+						
+					FinSi
+					si nombreUno="" y nombreDos="" y nombreTres="" y nombreCuatro="" y nombreCinco="" y nombreSeis="" y nombreSiete="" y nombreOcho="" Entonces
+						Escribir "No hay nombres almacenadas";
+						Escribir "Será devuelto al menú de inicio";
+						salirSistema<-falso;
+					FinSi
+					si nombreUno<>"" o nombreDos<>"" o nombreTres<>"" o nombreCuatro<>"" o nombreCinco<>""o nombreSeis<>""o nombreSiete<>""o nombreOcho<>"" Entonces
+						Leer nombreABuscar;
+						Segun nombreABuscar hacer
+							
+							1: si nombreUno<>"" Entonces
+									escribir nombreUno; 
+									Escribir "Escriba verdadero si el estudiante fue aprobado, de lo contrario escriba falso";
+									leer aprobadoUno;
+								SiNo
+									Escribir "No hay dato almacenado, será devuelto al inicio";
+									salirSistema<-falso;
+								FinSi
+							2:si nombreDos<>"" Entonces
+								escribir nombreDos; 
+								Escribir "Escriba verdadero si el estudiante fue aprobado, de lo contrario escriba falso";
+								leer aprobadoDos;
+							SiNo
+								Escribir "No hay dato almacenado, será devuelto al inicio";
+								salirSistema<-falso;
+							FinSi
+						3:si nombreTres<>"" Entonces
+							escribir nombreTres; 
+							Escribir "Escriba verdadero si el estudiante fue aprobado, de lo contrario escriba falso";
+							leer aprobadoTres;
+						SiNo
+							Escribir "No hay dato almacenado, será devuelto al inicio";
+							salirSistema<-falso;
+						FinSi
+					4: si nombreCuatro<>"" Entonces
+							escribir nombreCuatro; 
+							Escribir "Escriba verdadero si el estudiante fue aprobado, de lo contrario escriba falso";
+							leer aprobadoCuatro;
+						SiNo
+							Escribir "No hay dato almacenado, será devuelto al inicio";
+							salirSistema<-falso;
+						FinSi
+					5: 	si nombreCinco<>"" Entonces
+							escribir nombreCinco; 
+							Escribir "Escriba verdadero si el estudiante fue aprobado, de lo contrario escriba falso";
+							leer aprobadoCinco;
+							
+						SiNo
+							Escribir "No hay dato almacenado, será devuelto al inicio";
+							salirSistema<-falso;
+						FinSi
+					6:	si nombreSeis<>"" Entonces
+							escribir nombreSeis; 
+							Escribir "Escriba verdadero si el estudiante fue aprobado, de lo contrario escriba falso";
+							leer aprobadoSeis;
+							
+						SiNo
+							Escribir "No hay dato almacenado, será devuelto al inicio";
+							salirSistema<-falso;
+						FinSi
+					7:si nombreSiete<>"" Entonces
+						escribir nombreSiete; 
+						Escribir "Escriba verdadero si el estudiante fue aprobado, de lo contrario escriba falso";
+						leer aprobadoSiete;
+						
+					SiNo
+						Escribir "No hay dato almacenado, será devuelto al inicio";
+						salirSistema<-falso;
+					FinSi
+				8: si nombreOcho<>"" Entonces
+						escribir nombreOcho; 
+						Escribir "Escriba verdadero si el estudiante fue aprobado, de lo contrario escriba falso";
+						leer aprobadoOcho;
+						
+					SiNo
+						Escribir "No hay dato almacenado, será devuelto al inicio";
+						salirSistema<-falso;
+					FinSi
+														
+				De Otro Modo:
+					Escribir "Opcion invalida, será devuelto al inicio";
+					salirSistema<-falso;
+			FinSegun	
+		FinSi
+				
+	3:
+		
+		si nombreUno <> "" Entonces
+			Escribir "1. ", nombreUno;
+		FinSi
+		
+		si nombreDos <> "" Entonces
+			Escribir "2. ", nombreDos;
+			
+		FinSi
+		si nombreTres <> "" Entonces
+			Escribir "3. ", nombreTres;
+			
+		FinSi
+		si nombreCuatro <> "" Entonces
+			Escribir "4. ", nombreCuatro;
+			
+		FinSi
+		si nombreCinco <> "" Entonces
+			Escribir "5. ", nombreCinco;
+			
+		FinSi
+		si nombreSeis <> "" Entonces
+			Escribir "6. ", nombreSeis;
+			
+		FinSi
+		si nombreSiete <> "" Entonces
+			Escribir "7. ", nombreSiete;
+			
+		FinSi
+		si nombreOcho <> "" Entonces
+			Escribir "8. ", nombreOcho;
+			
+		FinSi
+		
+		si nombreUno="" y nombreDos="" y nombreTres="" y nombreCuatro="" y nombreCinco="" y nombreSeis="" y nombreSiete="" y nombreOcho="" Entonces
+			Escribir "No hay nombres almacenadas";
+			Escribir "Será devuelto al menú de inicio";
+			salirSistema<-falso;
+		FinSi
+		si nombreUno<>"" o nombreDos<>"" o nombreTres<>"" o nombreCuatro<>"" o nombreCinco<>""o nombreSeis<>""o nombreSiete<>""o nombreOcho<>"" Entonces
+			Leer nombreABuscar;
+			Segun nombreABuscar hacer
+				1: Si aprobadoUno=Verdadero entonces
+						Escribir nombreUno;
+						Escribir "El estudiante fue aprobado, por lo tanto puede continuar con el tramite para la licencia";
+					SiNo
+						Escribir nombreUno;
+						Escribir "No fue aprobado, deberá repetir el curso";
+					FinSi
+					
+				2: Si aprobadoDos=Verdadero entonces
+						Escribir nombreDos;
+						Escribir "El estudiante fue aprobado, por lo tanto puede continuar con el tramite para la licencia";
+					SiNo
+						Escribir nombreDos;
+						Escribir "No fue aprobado, deberá repetir el curso";
+					FinSi
+					
+				3:Si aprobadoTres=Verdadero entonces
+					Escribir nombreTres;
+					Escribir "El estudiante fue aprobado, por lo tanto puede continuar con el tramite para la licencia";
+				SiNo
+					Escribir nombreTres;
+					Escribir "No fue aprobado, deberá repetir el curso";
+				FinSi
+			4:Si aprobadoCuatro=Verdadero entonces
+				Escribir nombreCuatro;
+				Escribir "El estudiante fue aprobado, por lo tanto puede continuar con el tramite para la licencia";
+			SiNo
+				Escribir nombreCuatro;
+				Escribir "No fue aprobado, deberá repetir el curso";
+			FinSi
+		5:Si aprobadoCinco=Verdadero entonces
+			Escribir nombreCinco;
+			Escribir "El estudiante fue aprobado, por lo tanto puede continuar con el tramite para la licencia";
+		SiNo
+			Escribir nombreCinco;
+			Escribir "No fue aprobado, deberá repetir el curso";
+		FinSi
+	6:Si aprobadoSeis=Verdadero entonces
+		Escribir nombreSeis;
+		Escribir "El estudiante fue aprobado, por lo tanto puede continuar con el tramite para la licencia";
+	SiNo
+		Escribir nombreSeis;
+		Escribir "No fue aprobado, deberá repetir el curso";
+	FinSi
+7:Si aprobadoSiete=Verdadero entonces
+	Escribir nombreSiete;
+	Escribir "El estudiante fue aprobado, por lo tanto puede continuar con el tramite para la licencia";
+SiNo
+	Escribir nombreSiete;
+	Escribir "No fue aprobado, deberá repetir el curso";
+FinSi
+8:Si aprobadoOcho=Verdadero entonces
+	Escribir nombreOcho;
+	Escribir "El estudiante fue aprobado, por lo tanto puede continuar con el tramite para la licencia";
+SiNo
+	Escribir nombreOcho;
+	Escribir "No fue aprobado, deberá repetir el curso";
+FinSi
+De Otro Modo:
+	Escribir "Opcion invalida, será devuelto al inicio";
+	salirSistema<-falso;
+FinSegun
+FinSi
+4: salirSistema<-falso;
+	salirSistemaDefinitivo<-falso;	
+De Otro Modo:
+	Escribir "Opcion invalida";
+	salirSistema<-falso;	
+FinSegun
+Hasta Que salirSistema=falso;
+salirSistema<-Verdadero;
+
+Hasta Que salirSistemaDefinitivo=falso;
+
+FinProceso
+        </code>
+    </pre>
+    <h3>3. Organizar todos los puntos del taller de arreglos en modo funciones.
+    </h3>
+    <h4>Funciones y arreglos 1</h4>
+    <pre>
+        <code>
+SubProceso imprimirVector(datos, datoPedido)
+	Definir indice Como Entero;
+	para indice <-0 hasta 4 Hacer
+		Escribir datos[indice], datoPedido[indice];
+	FinPara
+FinSubProceso
+
+Proceso TallerArreglosYFuncionesUno
+	
+	Definir vector Como Entero;
+	definir datos, datoPedido, datoPedidoDos Como Caracter;
+	Dimension datos[5]; 
+	Dimension datoPedido[5];
+	datos[0]<-"[0]=";
+	datos[1]<-"[1]=";
+	datos[2]<-"[2]=";
+	datos[3]<-"[3]=";
+	datos[4]<-"[4]=";
+	Para vector<-0 Hasta 4 Con Paso 1 Hacer
+		Escribir "Escribe un valor para el indice ",vector;
+		leer datoPedido[vector];
+		
+	FinPara
+	Limpiar Pantalla;
+ 	imprimirVector(datos, datoPedido);
+FinProceso
+        </code>
+    </pre>
+    <h4>Funciones y arreglos 2</h4>
+    <pre>
+        <code>
+SubProceso numerosPares(vector)
+	si (vector)MOD(2)=0 Entonces
+		Escribir vector Sin Saltar, ", ";
+		
+	FinSi
+FinSubProceso
+SubProceso numerosiMPares(vector)
+	si (vector)MOD(2)=1 Entonces
+		Escribir vector Sin Saltar, ", ";
+	FinSi
+FinSubProceso
+Proceso TallerArreglosYFuncionesDos
+	Definir posicion Como entero;
+	definir vector Como Entero;
+	Dimension vector[20];
+	
+	para posicion<-0 hasta 19 Hacer
+		vector[posicion]<-Aleatorio(0,100);
+		
+	FinPara
+	
+	Escribir "numeros Pares: " Sin Saltar;
+	para posicion<-0 hasta 19 Hacer
+		numerosPares(vector[posicion]);
+	FinPara
+	Escribir "";
+	Escribir "numeros impares: " Sin Saltar;
+	para posicion<-0 hasta 19 Hacer
+		
+		numerosiMPares(vector[posicion]);
+	FinPara
+
+FinProceso
+        </code>
+    </pre>
+    <h4>Funciones y arreglos 3</h4>
+    <pre>
+        <code>
+SubProceso numeroPrimo(alcance)
+	si (alcance)MOD(2)<>0 y (alcance)MOD(3)<>0 y (alcance)MOD(5)<>0 y (alcance)MOD(7)<>0 y (alcance)MOD(11)<>0 Entonces
+		Escribir alcance;
+	FinSi
+	si alcance=2 o alcance=3 o alcance=5 o alcance=7 o alcance=11 Entonces
+		Escribir alcance;
+		
+	FinSi
+FinSubProceso
+Proceso TallerArreglosYFuncionesTres
+	Definir num, numPrimo, alcance Como Entero;
+	
+	para alcance<-1 hasta 1000 Hacer
+		
+numeroPrimo(alcance);
+	FinPara
+	
+FinProceso
+        </code>
+    </pre>
+    <h4>Funciones y arreglos 4</h4>
+    <pre>
+        <code>
+SubProceso quemarMatriz()
+	Definir fila, columna Como Entero;
+	definir matriz Como Caracter;
+	
+	Dimension matriz[4,5]; 
+	
+	matriz[0,0]<-"01";
+	matriz[0,1]<-"02";
+	matriz[0,2]<-"03";
+	matriz[0,3]<-"04";
+	matriz[0,4]<-"05";
+	matriz[1,0]<-"10";
+	matriz[1,1]<-"09";
+	matriz[1,2]<-"08";
+	matriz[1,3]<-"07";
+	matriz[1,4]<-"06";
+	matriz[2,0]<-"11";
+	matriz[2,1]<-"12";
+	matriz[2,2]<-"13";
+	matriz[2,3]<-"14";
+	matriz[2,4]<-"15";
+	matriz[3,0]<-"20";
+	matriz[3,1]<-"19";
+	matriz[3,2]<-"18";
+	matriz[3,3]<-"17";
+	matriz[3,4]<-"16";
+
+	para fila <-0 hasta 3 Hacer
+		para columna<-0 hasta 4 Hacer
+			Escribir matriz[fila,columna], " " Sin Saltar;
+		FinPara
+		Escribir "";
+	FinPara
+	
+	
+FinSubProceso
+Proceso TallerArreglosYFuncionesCuatro
+	quemarMatriz();
+	
+FinProceso
+        </code>
+    </pre>
+    <h4>Funciones y arreglos 5</h4>
+    <pre>
+        <code>
+SubProceso matrizTabla()
+	definir matriz Como Caracter;
+	Definir fila,columna Como Entero;
+	Dimension matriz[10,10]; 
+	matriz[0,0]<-"1x1";
+	matriz[0,1]<-"2x1";
+	matriz[0,2]<-"3x1";
+	matriz[0,3]<-"4x1";
+	matriz[0,4]<-"5x1";
+	matriz[0,5]<-"6x1";
+	matriz[0,6]<-"7x1";
+	matriz[0,7]<-"8x1";
+	matriz[0,8]<-"9x1";
+	matriz[0,9]<-"10x1";
+	matriz[1,0]<-"1x2";
+	matriz[1,1]<-"2x2";
+	matriz[1,2]<-"3x2";
+	matriz[1,3]<-"4x2";
+	matriz[1,4]<-"5x2";
+	matriz[1,5]<-"6x2";
+	matriz[1,6]<-"7x2";
+	matriz[1,7]<-"8x2";
+	matriz[1,8]<-"9x2";
+	matriz[1,9]<-"10x2";
+	matriz[2,0]<-"1x3";
+	matriz[2,1]<-"2x3";
+	matriz[2,2]<-"3x3";
+	matriz[2,3]<-"4x3";
+	matriz[2,4]<-"5x3";
+	matriz[2,5]<-"6x3";
+	matriz[2,6]<-"7x3";
+	matriz[2,7]<-"8x3";
+	matriz[2,8]<-"9x3";
+	matriz[2,9]<-"10x3";
+	matriz[3,0]<-"1x4";
+	matriz[3,1]<-"2x4";
+	matriz[3,2]<-"3x4";
+	matriz[3,3]<-"4x4";
+	matriz[3,4]<-"5x4";
+	matriz[3,5]<-"6x4";
+	matriz[3,6]<-"7x4";
+	matriz[3,7]<-"8x4";
+	matriz[3,8]<-"9x4";
+	matriz[3,9]<-"10x4";
+	matriz[4,0]<-"1x5";
+	matriz[4,1]<-"2x5";
+	matriz[4,2]<-"3x5";
+	matriz[4,3]<-"4x5";              
+	matriz[4,4]<-"5x5";
+	matriz[4,5]<-"6x5";
+	matriz[4,6]<-"7x5";
+	matriz[4,7]<-"8x5";
+	matriz[4,8]<-"9x5";
+	matriz[4,9]<-"10x5";
+	matriz[5,0]<-"1x6";
+	matriz[5,1]<-"2x6";
+	matriz[5,2]<-"3x6";
+	matriz[5,3]<-"4x6";
+	matriz[5,4]<-"5x6";
+	matriz[5,5]<-"6x6";
+	matriz[5,6]<-"7x6";
+	matriz[5,7]<-"8x6";
+	matriz[5,8]<-"9x6";
+	matriz[5,9]<-"10x6";
+	matriz[6,0]<-"1x7";
+	matriz[6,1]<-"2x7";
+	matriz[6,2]<-"3x7";
+	matriz[6,3]<-"4x7";
+	matriz[6,4]<-"5x7";
+	matriz[6,5]<-"6x7";
+	matriz[6,6]<-"7x7";
+	matriz[6,7]<-"8x7";
+	matriz[6,8]<-"9x7";
+	matriz[6,9]<-"10x7";
+	matriz[7,0]<-"1x8";
+	matriz[7,1]<-"2x8";
+	matriz[7,2]<-"3x8";
+	matriz[7,3]<-"4x8";
+	matriz[7,4]<-"5x8";
+	matriz[7,5]<-"6x8";
+	matriz[7,6]<-"7x8";
+	matriz[7,7]<-"8x8";
+	matriz[7,8]<-"9x8";
+	matriz[7,9]<-"10x8";
+	matriz[8,0]<-"1x9";
+	matriz[8,1]<-"2x9";
+	matriz[8,2]<-"3x9";
+	matriz[8,3]<-"4x9";
+	matriz[8,4]<-"5x9";
+	matriz[8,5]<-"6x9";
+	matriz[8,6]<-"7x9";
+	matriz[8,7]<-"8x9";
+	matriz[8,8]<-"9x9";
+	matriz[8,9]<-"10x9";
+	matriz[9,0]<-"1x10";
+	matriz[9,1]<-"2x10";
+	matriz[9,2]<-"3x10";
+	matriz[9,3]<-"4x10";
+	matriz[9,4]<-"5x10";
+	matriz[9,5]<-"6x10";
+	matriz[9,6]<-"7x10";
+	matriz[9,7]<-"8x10";
+	matriz[9,8]<-"9x10";
+	matriz[9,9]<-"10x10";
+	
+	para fila <-0 hasta 8 Hacer
+		para columna<-0 hasta 9 Hacer
+			Escribir matriz[fila,columna], "   " Sin Saltar;
+			
+		FinPara
+		
+		Escribir "";
+	FinPara
+	para fila <-9 hasta 9 Hacer
+		para columna<-0 hasta 9 Hacer
+			Escribir matriz[fila,columna], "  " Sin Saltar;
+			
+		FinPara
+		
+		Escribir "";
+	FinPara
+	
+FinSubProceso
+SubProceso matrizResultado()
+	Definir filaDos,columnaDos, matrizDos Como Entero;
+	Dimension matrizDos[10,10];
+	Para filaDos<-0 hasta 9 Hacer
+		
+		Para columnaDos<-0 hasta 9 Hacer
+			matrizDos[filaDos,columnaDos]<-(filaDos+1)*(columnaDos+1);
+		FinPara
+	FinPara
+	
+	Escribir "escriba la fila que desea hallar (TENGA EN CUENTA QUE LA FILA INICIA DESDE 0)";
+	leer filaDos;
+	Escribir "escriba la columna que desa hallar (TENGA EN CUENTA QUE LA COLUMNA INICIA DESDE 0)";
+	leer columnaDos;
+	Escribir matrizDos[filaDos,columnaDos];
+FinSubProceso
+Proceso TallerArreglosYFuncionesCinco
+	Dimension matriz[10,10]; 
+	Dimension matrizDos[10,10];
+	matrizTabla();
+	matrizResultado();
+FinProceso
+        </code>
+    </pre>
+    
+</body>
+</html>
